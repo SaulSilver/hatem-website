@@ -7,7 +7,7 @@ import SEO from '../components/seo';
 
 const HomePage = () => (
   <Layout>
-    <SEO title="home" />
+    <SEO title="Home" />
     <h3 className="profession">Web developer and freelancer</h3>
     <Fade delay="500">
       <h1 className="name">Hatem.</h1>
@@ -21,10 +21,9 @@ const HomePage = () => (
     <Fade delay="4000">
       <button>Contact</button>
     </Fade>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+    {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    </div> */}
   </Layout>
 );
 

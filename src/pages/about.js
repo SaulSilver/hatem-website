@@ -9,7 +9,7 @@ const aboutText =
 
 const AboutPage = () => (
   <Layout>
-    <SEO title="about" />
+    <SEO title="About" />
     <div className="about-content">
       <h1>
         <Fade bottom cascade>

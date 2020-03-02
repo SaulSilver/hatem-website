@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 
 const BlogPage = () => (
   <Layout>
-    <SEO title="blog" />
+    <SEO title="Blog" />
     <div className="blog-content">
       <h1>
         <Fade bottom cascade>

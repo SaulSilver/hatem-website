@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 
 const WorkPage = () => (
   <Layout>
-    <SEO title="work" />
+    <SEO title="Work" />
     <div className="work-content">
       <h1>
         <Fade bottom cascade>

@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Hatem - web developer and freelancer`,
+    title: `Hatem`,
     description: `Hatem, web developer and freelancer making webapps and websites for you.`,
-    author: `Hatem Houssein`,
+    author: `Hatem Houssein`
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -11,8 +11,8 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
-      },
+        path: `${__dirname}/src/images`
+      }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -25,11 +25,11 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
+        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-  ],
-}
+  ]
+};
