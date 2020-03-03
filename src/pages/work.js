@@ -1,23 +1,62 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { graphql, StaticQuery, Link } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
-const WorkPage = () => (
-  <Layout>
-    <SEO title="Work" />
-    <div className="work-content">
-      <h1>
-        <Fade bottom cascade>
-          Work
-        </Fade>
-      </h1>
-      <Fade bottom>
-        <p>Add project divs here</p>
-      </Fade>
-    </div>
-  </Layout>
-);
+// TODO: Change this to fetch the category per projects page
+const categoriesQuery = graphql`
+  query CategoriesQuery {
+    allMarkdownRemark(
+      filter: {
+        frontmatter: {
+          category: { in: ["fulltime", "freelance", "opensource"] }
+        }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            category
+            title
+          }
+        }
+      }
+    }
+  }
+`;
 
-export default WorkPage;
+const renderPage = data => {
+  console.log('data', data);
+  // const categoriesNodes = data.allMarkdownRemark.edges.map(
+  //   categoryNode => categoryNode.frontmatter
+  // );
+  // console.log('categoriesNodes:', categoriesNodes);
+  return (
+    <Layout>
+      <SEO title="Work" />
+      <div className="work-content">
+        <h1>
+          <Fade bottom cascade>
+            Work
+          </Fade>
+        </h1>
+        <ul className="categories-container">
+          <Link to="fulltime">
+            <li className="fulltime"></li>
+          </Link>
+          <Link to="freelance">
+            <li className="freelance"></li>
+          </Link>
+          <Link to="opensource">
+            <li className="opensource"></li>
+          </Link>
+        </ul>
+      </div>
+    </Layout>
+  );
+};
+
+export default () => (
+  <StaticQuery query={categoriesQuery} render={renderPage}></StaticQuery>
+);
