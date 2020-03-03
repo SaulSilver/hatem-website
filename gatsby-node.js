@@ -1,7 +1,19 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const projectTypes = ['fulltime', 'freelance', 'open-source'];
 
-// You can delete this file if you're not using it
+// exports.onCreatePage = data => {
+//   console.log('data', data);
+//   const {
+//     actions: { createPage, deletePage },
+//     page
+//   } = data;
+
+//   if (page.path.includes('category-projects')) {
+//     const oldPage = Object.assign({}, page);
+//     // Remove trailing slash unless page is /
+//     const projectType = projectTypes[projectTypes.lastIndexOf()];
+//     page.path = page.path.replace('category-projects', projectType);
+//     projectTypes.pop();
+//     deletePage(oldPage);
+//     createPage(page);
+//   }
+// };
