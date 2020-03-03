@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 import Fade from 'react-reveal/Fade';
 
@@ -28,13 +27,5 @@ const Header = () => (
     </nav>
   </header>
 );
-
-Header.propTypes = {
-  siteTitle: PropTypes.string
-};
-
-Header.defaultProps = {
-  siteTitle: ``
-};
 
 export default Header;

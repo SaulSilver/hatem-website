@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Hatem`,
-    description: `Hatem, web developer and freelancer making webapps and websites for you.`,
-    author: `Hatem Houssein`
+    description: `Hatem, a web developer and freelancer making web apps and websites for you.`,
+    author: `Hatem Houssein`,
+    email: `hatem.houssein@gmail.com`,
+    gitHub: `SaulSilver`,
+    gitLab: `hForHatem`,
+    twitter: `hatem_hou`
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -10,10 +14,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `src`,
+        path: `${__dirname}/src/`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`
       }
     },
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
