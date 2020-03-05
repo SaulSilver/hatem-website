@@ -4,16 +4,16 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Projects from '../../components/projects';
 
-const Fulltime = () => (
+const Opensource = () => (
   <Layout>
-    <SEO title="Fulltime projects" />
+    <SEO title="Open-source projects" />
     <h1>
       <Fade bottom cascade>
-        Fulltime projects
+        Open-source projects
       </Fade>
     </h1>
-    <Projects category="fulltime" />>
+    <Projects category="open-source" />>
   </Layout>
 );
 
-export default Fulltime;
+export default Opensource;

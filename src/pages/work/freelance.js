@@ -4,16 +4,16 @@ import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Projects from '../../components/projects';
 
-const Fulltime = () => (
+const Freelance = () => (
   <Layout>
-    <SEO title="Fulltime projects" />
+    <SEO title="Freelance projects" />
     <h1>
       <Fade bottom cascade>
-        Fulltime projects
+        Freelance projects
       </Fade>
     </h1>
-    <Projects category="fulltime" />>
+    <Projects category="freelance" />>
   </Layout>
 );
 
-export default Fulltime;
+export default Freelance;

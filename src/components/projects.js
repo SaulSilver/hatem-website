@@ -1,16 +1,43 @@
 import { StaticQuery, graphql } from 'gatsby';
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 
-// TODO: find a way to add variable `category` to graphql query
-const projectsQuery = category => graphql`
-  query CategoriesQuery {
+// FIXME: find a way to add variable `category` to graphql query
+const fulltime = graphql`
+  query FulltimeQuery {
     allMarkdownRemark(
-      filter: {
-        frontmatter: {
-          category: { eq: ${category} }
+      filter: { frontmatter: { category: { eq: "fulltime" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            category
+            title
+          }
         }
       }
+    }
+  }
+`;
+const freelance = graphql`
+  query Freelanceuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "freelance" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            category
+            title
+          }
+        }
+      }
+    }
+  }
+`;
+const opensource = graphql`
+  query OpensourceQuery {
+    allMarkdownRemark(
+      filter: { frontmatter: { category: { eq: "open-source" } } }
     ) {
       edges {
         node {
@@ -24,21 +51,23 @@ const projectsQuery = category => graphql`
   }
 `;
 
+const queries = { fulltime, freelance, opensource };
+
 const renderComponent = projects => (
   <div className="category-projects">
-    {projects.map((project, i) => (
+    {projects.allMarkdownRemark.edges.map((project, i) => (
       <div className="project" key={i}>
-        {project.title}
+        {project.node.frontmatter.title}
       </div>
     ))}
   </div>
 );
 
-const Projects = data => {
-  console.log('component data', data);
-  return (
-    <StaticQuery query={projectsQuery} render={renderComponent}></StaticQuery>
-  );
-};
+const Projects = data => (
+  <StaticQuery
+    query={queries[data.category]}
+    render={renderComponent}
+  ></StaticQuery>
+);
 
 export default Projects;

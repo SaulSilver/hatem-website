@@ -21,7 +21,7 @@ export default () => (
           <li className="freelance">Freelance</li>
         </Link>
         <Link to="/work/open-source/">
-          <li className="opensource">Open-source</li>
+          <li className="open-source">Open-source</li>
         </Link>
       </ul>
     </div>
