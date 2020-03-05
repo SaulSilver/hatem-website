@@ -12,7 +12,7 @@ const Opensource = () => (
         Open-source projects
       </Fade>
     </h1>
-    <Projects category="open-source" />>
+    <Projects category="open-source" />
   </Layout>
 );
 

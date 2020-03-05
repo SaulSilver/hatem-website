@@ -12,7 +12,7 @@ const Fulltime = () => (
         Fulltime projects
       </Fade>
     </h1>
-    <Projects category="fulltime" />>
+    <Projects category="fulltime" />
   </Layout>
 );
 

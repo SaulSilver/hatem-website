@@ -12,7 +12,7 @@ const Freelance = () => (
         Freelance projects
       </Fade>
     </h1>
-    <Projects category="freelance" />>
+    <Projects category="freelance" />
   </Layout>
 );
 
