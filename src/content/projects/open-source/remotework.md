@@ -1,7 +1,7 @@
 ---
-title: Coahsnap
+title: Remotework.jp
 description: Decision making for database minor design
-category: freelance
+category: open-source
 # tags: full,design
 ---
 
