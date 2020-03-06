@@ -2,6 +2,7 @@ import React from 'react';
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Link } from 'gatsby';
 
 const HomePage = props => {
   return (
@@ -18,7 +19,9 @@ const HomePage = props => {
         <h2 className="you">YOU</h2>
       </Fade>
       <Fade delay={3000}>
-        <button>Contact</button>
+        <button>
+          <Link to="/contact">Contact</Link>
+        </button>
       </Fade>
     </Layout>
   );

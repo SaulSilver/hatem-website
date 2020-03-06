@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Projects from '../../components/projects';
+import FooterPagination from '../../components/footer-pagination';
 
 const Fulltime = () => (
   <Layout>
@@ -13,6 +14,10 @@ const Fulltime = () => (
       </Fade>
     </h1>
     <Projects category="fulltime" />
+    <FooterPagination
+      previous={{ url: '/work/open-source', title: 'Open-source projects' }}
+      next={{ url: '/work/freelance', title: 'Freelance projects' }}
+    />
   </Layout>
 );
 
