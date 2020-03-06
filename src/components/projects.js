@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from 'gatsby';
 import React from 'react';
-
+// TODO: move this query to the work/index.js page and it pass the result down to each page
 const query = graphql`
   query ProjectsQuery {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "projects/" } }) {

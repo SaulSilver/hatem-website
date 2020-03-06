@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 
 const PostsQuery = graphql`
   query PostsQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
       edges {
         node {
           id
@@ -20,27 +20,24 @@ const PostsQuery = graphql`
   }
 `;
 
-const renderPage = data => {
-  const posts = data.allMarkdownRemark.edges;
-  return (
-    <Layout>
-      <SEO title="Blog" />
-      <div className="blog-content">
-        <h1>
-          <Fade bottom cascade>
-            Blog
-          </Fade>
-        </h1>
-        <div className="posts-container">
-          {posts.map((post, i) => (
-            <div className="post" key={i}>
-              {post.node.frontmatter.title}
-            </div>
-          ))}
-        </div>
+const renderPage = data => (
+  <Layout>
+    <SEO title="Blog" />
+    <div className="blog-content">
+      <h1>
+        <Fade bottom cascade>
+          Blog
+        </Fade>
+      </h1>
+      <div className="posts-container">
+        {data.allMarkdownRemark.edges.map((post, i) => (
+          <div className="post" key={i}>
+            {post.node.frontmatter.title}
+          </div>
+        ))}
       </div>
-    </Layout>
-  );
-};
+    </div>
+  </Layout>
+);
 
 export default () => <StaticQuery query={PostsQuery} render={renderPage} />;
