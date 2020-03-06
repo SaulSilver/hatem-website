@@ -3,7 +3,7 @@ import Fade from 'react-reveal/Fade';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Projects from '../../components/projects';
-import FooterPagination from '../../components/footer-pagination';
+import PageNav from '../../components/page-nav';
 
 const Freelance = () => (
   <Layout>
@@ -14,7 +14,7 @@ const Freelance = () => (
       </Fade>
     </h1>
     <Projects category="freelance" />
-    <FooterPagination
+    <PageNav
       previous={{ url: '/work/fulltime', title: 'Fulltime projects' }}
       next={{ url: '/work/open-source', title: 'Open-source projects' }}
     />
