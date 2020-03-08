@@ -4,6 +4,7 @@ published: true
 description: Decision making for database minor design
 category: software
 tags: database,design
+date: '2015-05-01T22:12:03.284Z'
 ---
 
 A while ago, I had to add a discount system for a web app. The discount period is a week and the start can differ from a user to another. Later on, we want to filter those users who are on a discount and those who are not.
