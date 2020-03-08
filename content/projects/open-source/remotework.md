@@ -2,6 +2,7 @@
 title: Remotework.jp
 description: Decision making for database minor design
 category: open-source
+date: '2020-05-01T22:12:03.284Z'
 # tags: full,design
 ---
 
