@@ -2,7 +2,10 @@ module.exports = {
   siteMetadata: {
     title: `Hatem`,
     description: `Hatem, a web developer and freelancer making web apps and websites for you.`,
-    author: `Hatem Houssein`,
+    author: {
+      name: `Hatem Houssein`,
+      summary: `blabla`
+    },
     email: `hatem.houssein@gmail.com`,
     gitHub: `SaulSilver`,
     gitLab: `hForHatem`,
@@ -25,6 +28,13 @@ module.exports = {
         path: `${__dirname}/src/images`
       }
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/content/posts`,
+    //     name: `posts`
+    //   }
+    // },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
