@@ -5,15 +5,15 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const PostLink = (post, i) => {
-  const title = post.node.frontmatter.title;
+  const { title, path } = post.node.frontmatter;
   return (
-    <Link to={`blog/${title}`} className="post" key={i}>
+    <Link to={path} className="post" key={i}>
       {title}
     </Link>
   );
 };
 
-const postsQuery = graphql`
+export const postsQuery = graphql`
   query PostsQuery {
     allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
       edges {
@@ -22,6 +22,7 @@ const postsQuery = graphql`
           frontmatter {
             description
             title
+            path
           }
         }
       }
@@ -29,8 +30,8 @@ const postsQuery = graphql`
   }
 `;
 
-const Blog = () => {
-  const data = useStaticQuery(postsQuery);
+const Blog = ({ data }) => {
+  const posts = data.allMarkdownRemark.edges;
   return (
     <Layout>
       <SEO title="Blog" />
@@ -40,9 +41,7 @@ const Blog = () => {
             Blog
           </Fade>
         </h1>
-        <div className="posts-container">
-          {data.allMarkdownRemark.edges.map(PostLink)}
-        </div>
+        <div className="posts-container">{posts.map(PostLink)}</div>
       </div>
     </Layout>
   );
