@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
 import SEO from '../components/seo';

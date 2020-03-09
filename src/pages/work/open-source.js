@@ -15,8 +15,8 @@ const Opensource = () => (
     </h1>
     <Projects category="open-source" />
     <PageNav
-      previous={{ url: '/work/freelance', title: 'Freelance projects' }}
-      next={{ url: '/work/fulltime', title: 'Fulltime projects' }}
+      previous={{ path: '/work/freelance', title: 'Freelance projects' }}
+      next={{ path: '/work/fulltime', title: 'Fulltime projects' }}
     />
   </Layout>
 );

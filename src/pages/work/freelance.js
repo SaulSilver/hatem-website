@@ -15,8 +15,8 @@ const Freelance = () => (
     </h1>
     <Projects category="freelance" />
     <PageNav
-      previous={{ url: '/work/fulltime', title: 'Fulltime projects' }}
-      next={{ url: '/work/open-source', title: 'Open-source projects' }}
+      previous={{ path: '/work/fulltime', title: 'Fulltime projects' }}
+      next={{ path: '/work/open-source', title: 'Open-source projects' }}
     />
   </Layout>
 );

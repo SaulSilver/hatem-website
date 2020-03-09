@@ -6,6 +6,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const blogPostTemplate = path.resolve(`src/templates/post.js`);
 
   const result = await graphql(`
+    fragment Frontmatter on MarkdownRemark {
+      frontmatter {
+        path
+        title
+      }
+    }
+
     {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/posts/" } }
@@ -13,10 +20,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         limit: 1000
       ) {
         edges {
+          previous {
+            ...Frontmatter
+          }
+          next {
+            ...Frontmatter
+          }
           node {
-            frontmatter {
-              path
-            }
+            ...Frontmatter
           }
         }
       }
@@ -28,89 +39,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return;
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
     createPage({
       path: node.frontmatter.path,
       component: blogPostTemplate,
-      context: {}
+      context: {
+        nextPost: next && next.frontmatter,
+        previousPost: previous && previous.frontmatter
+      }
     });
   });
 };
-
-// const { createFilePath } = require(`gatsby-source-filesystem`);
-
-// exports.createPages = async ({ graphql, actions }) => {
-//   const { createPage } = actions;
-
-//   const blogPost = path.resolve(`./src/templates/post.js`);
-//   // const result = await graphql(
-//   //   `
-//   //     {
-//   //       allMarkdownRemark(
-//   //         sort: { fields: [frontmatter___date], order: DESC }
-//   //         limit: 1000
-//   //       ) {
-//   //         edges {
-//   //           node {
-//   //             fields {
-//   //               slug
-//   //             }
-//   //             frontmatter {
-//   //               title
-//   //             }
-//   //           }
-//   //         }
-//   //       }
-//   //     }
-//   //   `
-//   // );
-//   const result = await graphql(
-//     `
-//       {
-//         allMarkdownRemark {
-//           edges {
-//             node {
-//               fields {
-//                 slug
-//               }
-//               frontmatter {
-//                 title
-//               }
-//             }
-//           }
-//         }
-//       }
-//     `
-//   );
-
-//   if (result.errors) {
-//     throw result.errors;
-//   }
-
-//   // Create blog posts pages.
-//   const posts = result.data.allMarkdownRemark.edges;
-
-//   posts.forEach((post, index) => {
-//     const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-//     const next = index === 0 ? null : posts[index - 1].node;
-
-//     createPage({
-//       path: post.node.fields.slug,
-//       component: blogPost,
-//       context: {
-//         slug: post.node.fields.slug,
-//         previous,
-//         next
-//       }
-//     });
-//   });
-// };
-
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions;
-
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode });
-//     createNodeField({ name: `slug`, node, value });
-//   }
-// };
