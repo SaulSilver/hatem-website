@@ -1,4 +1,5 @@
 ---
+path: '/blog/saving-dates-on-database-saves-your-day'
 title: Saving dates on database saves your day
 published: true
 description: Decision making for database minor design
