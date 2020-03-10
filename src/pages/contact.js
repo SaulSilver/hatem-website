@@ -53,23 +53,20 @@ const ContactPage = () => {
           </label>
         </p>
         <p>
-          <label>
-            Your name:
-            <br />
+          <label className="has-float-label">
+            Name
             <input type="text" name="name" onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Your email:
-            <br />
+            Email
             <input type="email" name="email" onChange={handleChange} />
           </label>
         </p>
         <p>
           <label>
-            Message:
-            <br />
+            Message
             <textarea name="message" onChange={handleChange} />
           </label>
         </p>

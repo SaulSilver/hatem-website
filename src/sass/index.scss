@@ -7,8 +7,28 @@ a {
 }
 
 .site-nav ul {
-  @include flex(row, space-around);
+  @include flex(row, space-around, center);
   .active {
     text-decoration: underline;
+  }
+}
+
+form {
+  @include flex(column, flex-start, flex-start);
+  margin: 10em;
+
+  input,
+  textarea {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-bottom: solid 2px $color-secondary;
+    z-index: 1;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primary;
+    }
   }
 }

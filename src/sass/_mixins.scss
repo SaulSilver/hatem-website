@@ -6,9 +6,13 @@
 //   box-shadow: 1px 1px 2px 2px $shadow-color; /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 // }
 
-@mixin flex($direction: column, $justify-content: center) {
+@mixin flex(
+  $direction: column,
+  $justify-content: center,
+  $align-items: center
+) {
   display: flex;
   flex-direction: $direction;
   justify-content: $justify-content;
-  align-items: center;
+  align-items: $align-items;
 }
