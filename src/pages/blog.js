@@ -8,7 +8,7 @@ const PostLink = (post, i) => {
   const { title, path } = post.node.frontmatter;
   return (
     <Link to={path} className="post" key={i}>
-      {title}
+      <li>{title}</li>
     </Link>
   );
 };
@@ -41,7 +41,7 @@ const Blog = ({ data }) => {
             Blog
           </Fade>
         </h1>
-        <div className="posts-container">{posts.map(PostLink)}</div>
+        <ul className="posts-container">{posts.map(PostLink)}</ul>
       </div>
     </Layout>
   );
