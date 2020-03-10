@@ -1,6 +1,5 @@
 import { Link } from 'gatsby';
 import React from 'react';
-import Fade from 'react-reveal/Fade';
 
 const showHomePageLink = pagePath =>
   pagePath !== '/' ? (
@@ -15,31 +14,29 @@ const Header = ({ pagePath, ...props }) => {
   return (
     <header>
       <nav className="site-nav">
-        <Fade top cascade>
-          <ul>
-            {showHomePageLink(pagePath)}
-            <li>
-              <Link to="/about" activeClassName="active">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/work" activeClassName="active">
-                Work
-              </Link>
-            </li>
-            <li>
-              <Link to="/blog" activeClassName="active">
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" activeClassName="active">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </Fade>
+        <ul>
+          {showHomePageLink(pagePath)}
+          <li>
+            <Link to="/about" activeClassName="active">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/work" activeClassName="active">
+              Work
+            </Link>
+          </li>
+          <li>
+            <Link to="/blog" activeClassName="active">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" activeClassName="active">
+              Contact
+            </Link>
+          </li>
+        </ul>
       </nav>
     </header>
   );

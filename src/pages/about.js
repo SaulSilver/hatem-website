@@ -38,7 +38,7 @@ const AboutPage = ({ data }) => {
 export default AboutPage;
 
 export const query = graphql`
-  query MyQuery {
+  query {
     allMarkdownRemark(filter: { frontmatter: { page: { eq: "about" } } }) {
       edges {
         node {
