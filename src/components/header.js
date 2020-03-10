@@ -19,16 +19,24 @@ const Header = ({ pagePath, ...props }) => {
           <ul>
             {showHomePageLink(pagePath)}
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/about" activeClassName="active">
+                About
+              </Link>
             </li>
             <li>
-              <Link to="/work">Work</Link>
+              <Link to="/work" activeClassName="active">
+                Work
+              </Link>
             </li>
             <li>
-              <Link to="/blog">Blog</Link>
+              <Link to="/blog" activeClassName="active">
+                Blog
+              </Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/contact" activeClassName="active">
+                Contact
+              </Link>
             </li>
           </ul>
         </Fade>

@@ -1,0 +1,14 @@
+@import './variables';
+@import './mixins';
+@import './normalize';
+
+a {
+  color: $color-primary;
+}
+
+.site-nav ul {
+  @include flex(row, space-around);
+  .active {
+    text-decoration: underline;
+  }
+}
