@@ -4,5 +4,6 @@
 .home {
   main {
     @include flex(column, center, center);
+    margin: 7em 0 7em;
   }
 }

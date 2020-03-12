@@ -45,11 +45,9 @@ a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
   &:active,
+  &:focus,
   &:hover {
     outline: 0;
-  }
-  &:focus {
-    outline: thin dotted;
   }
 }
 abbr[title] {
