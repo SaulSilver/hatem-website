@@ -10,14 +10,10 @@ const AboutPage = ({ data }) => {
   const pageContent = data.allMarkdownRemark.edges[0].node.frontmatter;
   const aboutImg = data.aboutImg.nodes[0];
   return (
-    <Layout>
+    <Layout className="about page">
       <SEO title="About" />
       <div className="about-content">
-        <h1>
-          <Fade bottom cascade>
-            About
-          </Fade>
-        </h1>
+        <h1>Who is Hatem</h1>
         <Fade bottom>{<p>{pageContent.history}</p>}</Fade>
         <Image
           caption={`Hatem at Teramachi in Kyoto, Japan.`}
