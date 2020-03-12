@@ -6,7 +6,7 @@ import { Link } from 'gatsby';
 
 const HomePage = props => {
   return (
-    <Layout pagePath={props.path}>
+    <Layout pagePath={props.path} className="home page">
       <SEO title="Home" />
       <h3 className="profession">Web developer and freelancer</h3>
       <Fade delay={500}>
