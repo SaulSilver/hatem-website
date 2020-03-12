@@ -1,21 +1,16 @@
 import { Link } from 'gatsby';
 import React from 'react';
 
-const showHomePageLink = pagePath =>
-  pagePath !== '/' ? (
-    <li>
-      <Link to="/">Home</Link>
-    </li>
-  ) : (
-    ''
-  );
-
-const Header = ({ pagePath, ...props }) => {
+const Header = props => {
   return (
     <header>
       <nav className="site-nav">
         <ul>
-          {showHomePageLink(pagePath)}
+          <li>
+            <Link to="/" activeClassName="active">
+              Home
+            </Link>
+          </li>
           <li>
             <Link to="/about" activeClassName="active">
               About

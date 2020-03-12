@@ -7,7 +7,6 @@ import SEO from '../../components/seo';
 import Image from '../../components/image';
 
 const Work = ({ data }) => {
-  console.log('data', data);
   const { freelanceImg, fulltimeImg, opensourceImg } = data;
   return (
     <Layout>
@@ -21,51 +20,68 @@ const Work = ({ data }) => {
         <ul className="categories-container">
           <Link to="/work/fulltime/">
             <li className="fulltime">
-              <Image caption={`Fulltime project`}>
+              <Image caption={`Fulltime`}>
                 <Img
-                  alt="Fulltime project"
+                  alt="Fulltime projects"
                   fixed={fulltimeImg.nodes[0].fixed}
                 />
               </Image>
             </li>
           </Link>
           <Link to="/work/freelance/">
-            <li className="freelance">Freelance</li>
+            <li className="freelance">
+              <Image caption={`Freelance`}>
+                <Img
+                  alt="Freelance projects"
+                  fixed={freelanceImg.nodes[0].fixed}
+                />
+              </Image>
+            </li>
           </Link>
           <Link to="/work/open-source/">
-            <li className="open-source">Open-source</li>
+            <li className="open-source">
+              <Image caption={`Open-source`}>
+                <Img
+                  alt="Open-source projects"
+                  fixed={opensourceImg.nodes[0].fixed}
+                />
+              </Image>
+            </li>
           </Link>
         </ul>
       </div>
     </Layout>
   );
 };
-// TODO: change image names
+
 export const query = graphql`
-  query {
-    fulltimeImg: allImageSharp(
-      filter: { fluid: { originalName: { eq: "gatsby-astronaut.png" } } }
-    ) {
-      fixed(width: 125, height: 125) {
+  fragment ImgFields on ImageSharpConnection {
+    nodes {
+      fixed(width: 360, height: 230) {
         ...GatsbyImageSharpFixed_withWebp
       }
     }
   }
+
+  query {
+    fulltimeImg: allImageSharp(
+      filter: { fluid: { originalName: { eq: "fulltime.png" } } }
+    ) {
+      ...ImgFields
+    }
+
+    freelanceImg: allImageSharp(
+      filter: { fluid: { originalName: { eq: "freelance.png" } } }
+    ) {
+      ...ImgFields
+    }
+
+    opensourceImg: allImageSharp(
+      filter: { fluid: { originalName: { eq: "opensource.png" } } }
+    ) {
+      ...ImgFields
+    }
+  }
 `;
 
-// freelanceImg: allImageSharp(
-//   filter: { fluid: { originalName: { eq: "gatsby-astronaut.png" } } }
-// ) {
-//   fixed(width: 125, height: 125) {
-//     ...GatsbyImageSharpFixed_withWebp
-//   }
-// }
-
-// opensourceImg: allImageSharp(
-//   filter: { fluid: { originalName: { eq: "gatsby-astronaut.png" } } }
-// ) {
-//   fixed(width: 125, height: 125) {
-//     ...GatsbyImageSharpFixed_withWebp
-//   }
-// }
 export default Work;
