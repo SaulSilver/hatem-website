@@ -1,7 +1,13 @@
 @import './variables';
 @import './mixins';
 @import './normalize';
-@import './pages/index';
+@import './pages';
+@import './components';
+
+// Debug outline
+// * {
+//   outline: 1px solid red;
+// }
 
 a {
   color: $color-primary;
@@ -15,11 +21,17 @@ a {
 }
 
 footer {
+  position: relative;
+  top: 99%;
   @include flex(column, center, center);
 }
 
-.layout {
+.layout-container {
+  // .layout {
   margin: 0 auto;
+  // min-height: 100%;
+  height: 100vh;
   max-width: 960;
   padding: 0 1.0875rem 1.45rem;
+  // }
 }

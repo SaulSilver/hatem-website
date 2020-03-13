@@ -8,20 +8,20 @@ const HomePage = props => {
   return (
     <Layout pagePath={props.path} className="home page">
       <SEO title="Home" />
-      <h3 className="profession">Web developer and freelancer</h3>
+      <label className="profession">Web developer and freelancer</label>
       <Fade delay={500}>
-        <h1 className="name">Hatem.</h1>
+        <label className="name">Hatem.</label>
       </Fade>
       <Fade delay={1200}>
-        <h3 className="do">Making web apps and websites for</h3>
+        <label className="do">Making web apps and websites for</label>
       </Fade>
       <Fade delay={2500}>
-        <h2 className="you">YOU</h2>
+        <label className="you">YOU</label>
       </Fade>
       <Fade delay={3000}>
-        <button>
-          <Link to="/contact">Contact</Link>
-        </button>
+        <Link to="/contact" className="contact-btn">
+          <button>Contact</button>
+        </Link>
       </Fade>
     </Layout>
   );
