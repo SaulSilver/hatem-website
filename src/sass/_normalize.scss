@@ -1,28 +1,11 @@
 @import './variables';
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  scroll-behavior: smooth;
-  background: no-repeat center/70% url('../images/h-background.svg');
-}
-
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  overflow-y: scroll;
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
-  // font: 112.5%/1.45em georgia, serif;
-  @media only screen and (max-width: 480px) {
-    font-size: 100%;
-  }
 }
-
 body {
   margin: 0;
-  max-width: 1000px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -130,7 +113,7 @@ input,
 optgroup,
 select,
 textarea {
-  // font: inherit;
+  font: inherit;
   margin: 0;
 }
 optgroup {
@@ -204,6 +187,11 @@ textarea {
   -webkit-appearance: button;
   font: inherit;
 }
+html {
+  font: 112.5%/1.45em georgia, serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
 * {
   box-sizing: inherit;
 }
@@ -212,6 +200,17 @@ textarea {
 }
 *:after {
   box-sizing: inherit;
+}
+body {
+  color: hsla(0, 0%, 0%, 0.8);
+  font-family: $font-family;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+  font-feature-settings: 'kern', 'liga', 'clig', 'calt';
 }
 img {
   max-width: 100%;
@@ -614,4 +613,9 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: '';
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
 }

@@ -13,7 +13,7 @@ const Layout = ({ children, pagePath, className }) => {
     }
   `);
   return (
-    <div className="layout-container">
+    <>
       <Header siteTitle={data.site.siteMetadata.title} pagePath={pagePath} />
       <div className={`layout ${className}`}>
         <main>{children}</main>
@@ -22,7 +22,7 @@ const Layout = ({ children, pagePath, className }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
-    </div>
+    </>
   );
 };
 
