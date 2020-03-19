@@ -1,8 +1,7 @@
-@import '../variables';
 @import '../mixins';
 
 .home {
-  background: url(../images/website/logo.svg) center no-repeat;
+  background: url(../images/website/logo.svg) center no-repeat; //import is relative the SCSS main entry file
   main {
     @include flex(column, center, center);
     margin: 7em 0 7em;

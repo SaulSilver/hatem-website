@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-import Fade from 'react-reveal/Fade';
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
 import Image from '../../components/image';
@@ -9,14 +8,10 @@ import Image from '../../components/image';
 const Work = ({ data }) => {
   const { freelanceImg, fulltimeImg, opensourceImg } = data;
   return (
-    <Layout>
+    <Layout className="work">
       <SEO title="Work" />
+      <h2>Work</h2>
       <div className="work-content">
-        <h1>
-          <Fade bottom cascade>
-            Work
-          </Fade>
-        </h1>
         <ul className="categories-container">
           <Link to="/work/fulltime/">
             <li className="fulltime">

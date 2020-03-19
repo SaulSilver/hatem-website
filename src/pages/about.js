@@ -10,7 +10,7 @@ const AboutPage = ({ data }) => {
   const pageContent = data.allMarkdownRemark.edges[0].node.frontmatter;
   const aboutImg = data.aboutImg.nodes[0];
   return (
-    <Layout className="about page">
+    <Layout className="about">
       <SEO title="About" />
       <h2>Who is Hatem?</h2>
       <div className="about-content">
