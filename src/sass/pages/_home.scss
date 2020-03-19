@@ -2,6 +2,7 @@
 @import '../mixins';
 
 .home {
+  background: url(../images/website/logo.svg) center no-repeat;
   main {
     @include flex(column, center, center);
     margin: 7em 0 7em;
