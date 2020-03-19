@@ -12,8 +12,8 @@ const AboutPage = ({ data }) => {
   return (
     <Layout className="about page">
       <SEO title="About" />
+      <h2>Who is Hatem?</h2>
       <div className="about-content">
-        <h1>Who is Hatem</h1>
         <Fade bottom>{<p>{pageContent.history}</p>}</Fade>
         <Image
           caption={`Hatem at Teramachi in Kyoto, Japan.`}

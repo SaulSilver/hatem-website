@@ -1,0 +1,12 @@
+@import '../mixins';
+
+.about-content {
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  p {
+    width: 500px;
+  }
+  figure {
+    min-width: 20%;
+  }
+}
