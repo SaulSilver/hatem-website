@@ -15,14 +15,15 @@ const HomePage = props => {
       <Fade delay={1200}>
         <h3 className="do">Making web apps and websites for</h3>
       </Fade>
-      <Fade delay={2500}>
+      <Fade delay={2000}>
         <h2 className="you">YOU</h2>
       </Fade>
-      <Fade delay={3000}>
-        <button>
-          <Link to="/contact">Contact</Link>
-        </button>
-      </Fade>
+      {/* <Fade delay={2400}> */}
+      <Link to="/contact" className="btn">
+        Contact me
+      </Link>
+
+      {/* </Fade> */}
     </Layout>
   );
 };
