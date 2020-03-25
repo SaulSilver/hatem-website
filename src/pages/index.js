@@ -8,9 +8,10 @@ const HomePage = props => {
   return (
     <Layout pagePath={props.path} className="home">
       <SEO title="Home" />
-      <h3 className="profession">Web developer and freelancer</h3>
+      {/* roll text: "Web developer", "Frontend", "Backend", "Freelancer", "Web designer", "Mentor" */}
+      <h3 className="profession">Web developer</h3>
       <Fade cascade delay={500}>
-        <h1 className="name">Hatem.</h1>
+        <h1 className="name">Hatem</h1>
       </Fade>
       <Fade delay={1200}>
         <h3 className="do">Making web apps and websites for</h3>

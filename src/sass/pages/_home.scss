@@ -1,13 +1,31 @@
 @import '../mixins';
 
 .home {
-  background: url(../images/website/logo.svg) center no-repeat; //import is relative the SCSS main entry file
+  background: url(../images/website/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
   main {
     @include flex(column, center, center);
-    margin: 7em 0 7em;
+    text-align: center;
 
-    h3 {
+    .profession {
+      margin: 10vh 0 5vh;
       font-weight: normal;
+      font-size: calc(1em + 2vw);
+    }
+    .name {
+      font-size: calc(1em + 6.5vw);
+      text-transform: capitalize;
+      letter-spacing: 0.5em;
+    }
+    .do {
+      font-weight: normal;
+      font-size: calc(1em + 2vw);
+      margin: 5vh 0 5vh;
+    }
+    .you {
+      font-size: calc(1em + 3vw);
+    }
+    .btn {
+      margin: 10vh 0 10vh;
     }
   }
 }
