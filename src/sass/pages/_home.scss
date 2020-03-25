@@ -1,15 +1,20 @@
 @import '../mixins';
+@import '../variables';
 
 .home {
   background: url(../images/website/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
   main {
     @include flex(column, center, center);
     text-align: center;
-
     .profession {
+      position: relative;
+      left: -25%;
       margin: 10vh 0 5vh;
       font-weight: normal;
       font-size: calc(1em + 2vw);
+      @media screen and (max-width: $width-mobile) {
+        position: static;
+      }
     }
     .name {
       font-size: calc(1em + 6.5vw);
@@ -17,9 +22,14 @@
       letter-spacing: 0.5em;
     }
     .do {
+      position: relative;
+      left: 15%;
+      margin: 5vh 0 5vh;
       font-weight: normal;
       font-size: calc(1em + 2vw);
-      margin: 5vh 0 5vh;
+      @media screen and (max-width: $width-mobile) {
+        position: static;
+      }
     }
     .you {
       font-size: calc(1em + 3vw);
