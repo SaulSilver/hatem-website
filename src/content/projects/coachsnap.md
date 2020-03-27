@@ -1,5 +1,5 @@
 ---
-path: '/projects/coachsnap'
+path: '/work/coachsnap'
 title: Coahsnap
 description: Decision making for database minor design
 category: freelance

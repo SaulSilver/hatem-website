@@ -1,5 +1,5 @@
 ---
-path: '/projects/shipandco'
+path: '/work/shipandco'
 title: Ship&co
 description: Decision making for database minor design
 category: fulltime

@@ -1,5 +1,5 @@
 ---
-path: '/projects/remote-jp'
+path: '/work/remote-jp'
 title: Remotework.jp
 description: Decision making for database minor design
 category: open-source

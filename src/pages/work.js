@@ -13,6 +13,23 @@ const ProjectLink = (post, i) => {
   );
 };
 
+const Work = ({ data }) => {
+  const projects = data.allMarkdownRemark.edges;
+  return (
+    <Layout>
+      <SEO title="Work" />
+      <div className="projects-content">
+        <h1>
+          <Fade bottom cascade>
+            Projects
+          </Fade>
+        </h1>
+        <ul className="projects-container">{projects.map(ProjectLink)}</ul>
+      </div>
+    </Layout>
+  );
+};
+
 export const projectsQuery = graphql`
   {
     allMarkdownRemark(
@@ -32,21 +49,4 @@ export const projectsQuery = graphql`
   }
 `;
 
-const Projects = ({ data }) => {
-  const projects = data.allMarkdownRemark.edges;
-  return (
-    <Layout>
-      <SEO title="Projects" />
-      <div className="projects-content">
-        <h1>
-          <Fade bottom cascade>
-            Projects
-          </Fade>
-        </h1>
-        <ul className="projects-container">{projects.map(ProjectLink)}</ul>
-      </div>
-    </Layout>
-  );
-};
-
-export default Projects;
+export default Work;
