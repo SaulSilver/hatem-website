@@ -51,7 +51,7 @@ export const query = graphql`
       filter: { fluid: { originalName: { eq: "about.jpeg" } } }
     ) {
       nodes {
-        fluid(maxWidth: 690, traceSVG: { color: "#e7e3e8" }) {
+        fluid(maxWidth: 750, traceSVG: { color: "#e7e3e8" }) {
           ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }

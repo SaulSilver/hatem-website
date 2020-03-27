@@ -10,6 +10,9 @@
     flex-wrap: wrap;
     p {
       width: 500px;
+      @media screen and(max-width: 1160px) {
+        width: auto;
+      }
     }
     figure {
       min-width: 20%;

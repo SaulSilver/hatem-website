@@ -2,7 +2,7 @@
 @import '../variables';
 
 .work {
-  background: url(../images/website/logo.svg) center no-repeat; //import is relative the SCSS main entry file
+  background: url(../images/website/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
   .categories-container {
     @include flex(row, center, center);
     flex-wrap: wrap;
