@@ -3,29 +3,40 @@ import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 
 const AboutPage = ({ data }) => {
   const pageContent = data.allMarkdownRemark.edges[0].node.frontmatter;
-  const aboutImg = data.aboutImg.nodes[0];
+  console.log(pageContent);
   return (
     <Layout className="about">
       <SEO title="About" />
       <h2>Who is Hatem?</h2>
+      <Img
+        className="japan-image"
+        alt="Japan"
+        fluid={pageContent.japanImage.childImageSharp.fixed}
+      />
+      {/* <Img
+        className="sweden-image"
+        alt="Sweden"
+        fluid={pageContent.swedenImage.childImageSharp.fluid}
+      />
+      <Img
+        className="egypt-image"
+        alt="Egypt"
+        fluid={pageContent.egyptImage.childImageSharp.fluid}
+      /> */}
       <div className="about-content">
-        <Fade bottom>{<p>{pageContent.history}</p>}</Fade>
-        <Image
-          caption={`Hatem at Teramachi in Kyoto, Japan.`}
-          creditLink="http://misojournal.blogspot.com/"
-          credit="Miso Journal"
-        >
-          <Img
-            alt="Hatem Houssein at Teramachi in Kyoto, Japan."
-            fluid={aboutImg.fluid}
-          />
-        </Image>
-        <Fade bottom>{<p>{pageContent.interests}</p>}</Fade>
+        <Fade bottom>
+          <p>{pageContent.history}</p>
+          <p>{pageContent.interests}</p>
+        </Fade>
+        <Img
+          className="about-image"
+          alt="Hatem Houssein at Teramachi in Kyoto, Japan."
+          fluid={pageContent.hatemImage.childImageSharp.fluid}
+        />
       </div>
     </Layout>
   );
@@ -42,17 +53,21 @@ export const query = graphql`
           frontmatter {
             history
             interests
+            hatemImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            japanImage {
+              childImageSharp {
+                fixed(width: 400) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
-        }
-      }
-    }
-
-    aboutImg: allImageSharp(
-      filter: { fluid: { originalName: { eq: "about.jpeg" } } }
-    ) {
-      nodes {
-        fluid(maxWidth: 750, traceSVG: { color: "#e7e3e8" }) {
-          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

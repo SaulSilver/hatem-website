@@ -1,10 +1,6 @@
 @import '../mixins';
 
 .about {
-  background-image: url(../images/website/egypt.svg),
-    url(../images/website/sweden.svg), url(../images/website/japan.svg); //import is relative the SCSS main entry file
-  background-position: bottom right, top right, bottom left;
-  background-repeat: no-repeat;
   .about-content {
     @include flex(row, space-between, center);
     flex-wrap: wrap;
@@ -14,7 +10,7 @@
         width: auto;
       }
     }
-    figure {
+    about-image {
       min-width: 20%;
     }
   }
