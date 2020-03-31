@@ -1,22 +1,31 @@
 @import '../mixins';
 @import '../variables';
 
-.work {
+.projects-content {
   background: url(../images/website/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
-  .categories-container {
-    @include flex(row, center, center);
+  .projects-container {
+    @include flex(row, space-around, center);
     flex-wrap: wrap;
-    figure {
-      min-width: 20%;
+    .project {
       position: relative;
       text-align: center;
-      color: $color-background;
-      figcaption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        // text-shadow: $color-primary;
+      min-width: 15em;
+      font-weight: bold;
+      transition: filter 1s ease-in-out;
+      p {
+        display: none;
+      }
+      .project-image:hover {
+        filter: brightness(70%);
+        + p {
+          display: inline;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: $color-background;
+          text-shadow: 1px 1px 5px $color-primary;
+        }
       }
     }
   }

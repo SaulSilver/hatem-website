@@ -1,14 +1,22 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const ProjectLink = (post, i) => {
-  const { title, path } = post.node.frontmatter;
+  const { title, path, projectImage } = post.node.frontmatter;
   return (
-    <Link to={path} className="post" key={i}>
-      <li>{title}</li>
+    <Link to={path} className="project" key={i}>
+      <li>
+        <Img
+          className="project-image"
+          alt="Hatem Houssein at Teramachi in Kyoto, Japan."
+          fluid={projectImage.childImageSharp.fluid}
+        />
+        <p>{title}</p>
+      </li>
     </Link>
   );
 };
@@ -42,6 +50,13 @@ export const projectsQuery = graphql`
             description
             title
             path
+            projectImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

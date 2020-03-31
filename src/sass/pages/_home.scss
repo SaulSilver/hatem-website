@@ -9,7 +9,7 @@
     .profession {
       position: relative;
       left: -25%;
-      margin: 10vh 0 5vh;
+      margin: 6vh 0 5vh;
       font-weight: normal;
       font-size: calc(1em + 2vw);
       @media screen and (max-width: $width-mobile) {
@@ -17,7 +17,7 @@
       }
     }
     .name {
-      font-size: calc(1em + 6.5vw);
+      font-size: calc(1em + 6vw);
       text-transform: capitalize;
       letter-spacing: 0.5em;
     }
@@ -35,7 +35,7 @@
       font-size: calc(1em + 3vw);
     }
     .btn {
-      margin: 10vh 0 10vh;
+      margin: 5vh 0 10vh;
     }
   }
 }
