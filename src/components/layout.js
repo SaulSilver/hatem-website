@@ -17,10 +17,10 @@ const Layout = ({ children, pagePath, className }) => {
       <Header siteTitle={data.site.siteMetadata.title} pagePath={pagePath} />
       <div className={`layout ${className}`}>
         <main>{children}</main>
-        <footer>
+        {/* <footer>
           © {new Date().getFullYear()}, Built with
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        </footer> */}
       </div>
     </>
   );

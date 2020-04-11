@@ -2,7 +2,6 @@
 @import '../variables';
 
 .projects-content {
-  background: url(../images/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
   .projects-container {
     @include flex(row, space-around, center);
     flex-wrap: wrap;

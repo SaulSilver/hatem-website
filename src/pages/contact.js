@@ -48,31 +48,28 @@ const ContactPage = () => {
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
           <label>
-            Don’t fill this out:{' '}
+            Don’t fill this out:
             <input name="bot-field" onChange={handleChange} />
           </label>
         </p>
-        <p>
-          <label className="has-float-label">
-            Name
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Email
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <label>
-            Message
-            <textarea name="message" onChange={handleChange} />
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+        />
+        <textarea
+          name="message"
+          placeholder="How can I help you? Want to grab a drink together"
+          onChange={handleChange}
+        />
+        <button type="submit">Send</button>
       </form>
     </Layout>
   );
