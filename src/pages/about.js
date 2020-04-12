@@ -9,7 +9,7 @@ const AboutPage = ({ data }) => {
   const pageContent = data.allMarkdownRemark.edges[0].node.frontmatter;
   console.log(pageContent);
   return (
-    <Layout className="about">
+    <Layout>
       <SEO title="About" />
       <h2>Who is Hatem?</h2>
       <Img

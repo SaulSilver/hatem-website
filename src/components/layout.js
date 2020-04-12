@@ -15,7 +15,7 @@ const Layout = ({ children, pagePath, className }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} pagePath={pagePath} />
-      <div className={`layout ${className}`}>
+      <div className={`layout ${className || ''}`}>
         <main>{children}</main>
         {/* <footer>
           © {new Date().getFullYear()}, Built with
