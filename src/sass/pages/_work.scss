@@ -5,6 +5,7 @@
   .projects-container {
     @include flex(row, space-around, center);
     flex-wrap: wrap;
+    margin: 0;
     .project {
       position: relative;
       margin: 1em;
