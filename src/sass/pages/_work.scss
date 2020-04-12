@@ -7,23 +7,26 @@
     flex-wrap: wrap;
     .project {
       position: relative;
-      text-align: center;
+      margin: 1em;
       min-width: 15em;
+      text-align: center;
       font-weight: bold;
-      transition: filter 1s ease-in-out;
       p {
         display: none;
       }
-      .project-image:hover {
-        filter: brightness(70%);
-        + p {
-          display: inline;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          color: $color-background;
-          text-shadow: 1px 1px 5px $color-primary;
+      .project-image {
+        transition: filter 0.25s ease-in-out;
+        &:hover {
+          filter: brightness(70%);
+          + p {
+            display: inline;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $color-background;
+            text-shadow: 1px 1px 5px $color-primary;
+          }
         }
       }
     }
