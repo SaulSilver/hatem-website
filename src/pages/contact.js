@@ -36,7 +36,7 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <h2>Say hello</h2>
+      <h1>Say hello</h1>
       <p>
         Feel free to contact me about anything and I will get back to you as
         soon as I can.

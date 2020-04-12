@@ -11,7 +11,7 @@ const Post = ({ data, pageContext }) => {
     <Layout>
       <SEO title="Blog post" />
       <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
+      <small>{frontmatter.date}</small>
       <div
         className="blog-post-content"
         dangerouslySetInnerHTML={{ __html: html }}

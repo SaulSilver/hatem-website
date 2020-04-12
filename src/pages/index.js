@@ -17,7 +17,7 @@ const HomePage = props => {
         <h3 className="do">Making web apps and websites for</h3>
       </Fade>
       <Fade cascade delay={2000}>
-        <h2 className="you">YOU</h2>
+        <h1 className="you">YOU</h1>
       </Fade>
       {/* <Fade delay={2400}> */}
       <Link to="/contact" className="btn">

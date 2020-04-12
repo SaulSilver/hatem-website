@@ -11,7 +11,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="About" />
-      <h2>Who is Hatem?</h2>
+      <h1>Who is Hatem?</h1>
       <Img
         className="japan-image"
         alt="Japan"
