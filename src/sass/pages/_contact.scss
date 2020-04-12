@@ -2,16 +2,20 @@
 @import '../mixins';
 
 form {
-  @include flex(column, flex-start, flex-start);
-  margin: 10em;
-
+  @include flex(column, center, center);
+  margin: 3em 10em;
+  @media screen and (max-width: $width-mobile) {
+    margin: 0;
+  }
+  * {
+    margin: 2em;
+  }
   input,
   textarea {
     width: 100%;
-    // position: relative;
     border: none;
-    border-bottom: solid 2px $color-secondary;
-
+    border-bottom: solid 2px $color-tertiary;
+    transition: border-color 0.25s ease-in-out;
     &:focus {
       outline: none;
       border-color: $color-primary;
@@ -19,5 +23,15 @@ form {
   }
   textarea {
     min-height: 120px;
+    resize: none;
+  }
+  .contact-by-email {
+    margin-top: 0;
+    * {
+      margin: 0.2em;
+    }
+    a {
+      text-decoration: underline;
+    }
   }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { navigate } from 'gatsby-link';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import { Link } from 'gatsby';
 
 const encode = data =>
   Object.keys(data)
@@ -35,10 +36,14 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <h1>Contact</h1>
+      <h2>Say hello</h2>
+      <p>
+        Feel free to contact me about anything and I will get back to you as
+        soon as I can.
+      </p>
       <form
         name="contact"
-        method="post"
+        method="POST"
         action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
@@ -66,10 +71,18 @@ const ContactPage = () => {
         />
         <textarea
           name="message"
-          placeholder="How can I help you? Want to grab a drink together"
+          placeholder="How can I help you? Want to grab a drink together?"
           onChange={handleChange}
         />
-        <button type="submit">Send</button>
+        <button type="submit" className="btn">
+          Send message
+        </button>
+        <div className="contact-by-email">
+          <span>or</span>
+          <a href="mailto:hatem.houssein@gmail" rel="noreferer">
+            hatem.houssein@gmail
+          </a>
+        </div>
       </form>
     </Layout>
   );
