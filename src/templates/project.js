@@ -17,13 +17,17 @@ const formatDate = ({ from, to }) => {
 
 const Project = ({ data, pageContext }) => {
   const { frontmatter, html } = data.markdownRemark;
-  const { title, from, to, projectImage } = frontmatter;
+  const { title, from, to, projectLink, projectImage } = frontmatter;
   const { next, previous } = pageContext;
   return (
     <Layout>
       <SEO title="Project" />
       <h1>{title}</h1>
       <small>{formatDate({ from, to })}</small>
+      <br></br>
+      <a href={projectLink} target="_blank">
+        {projectLink}
+      </a>
       <Img
         className="project-image"
         alt={`${title} image`}
@@ -46,6 +50,7 @@ export const pageQuery = graphql`
         from
         to
         title
+        projectLink
         projectImage {
           childImageSharp {
             fluid(maxWidth: 400) {
