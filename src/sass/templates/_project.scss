@@ -2,15 +2,20 @@
 @import '../variables';
 
 .project-container {
-  @include flex(row-reverse, space-between, center);
+  @include flex(row-reverse, space-between, flex-start);
+  ul,
+  ol {
+    list-style: cjk-ideographic;
+  }
   .project-image {
     margin: 2em 0;
-    width: calc(80em + 30vw);
+    width: calc(80em + 20vw);
     @include shadow(20px, 4px);
   }
   .project-content {
     margin: 2em 4em 0 0;
     padding: 0.5em;
+    min-width: 500px;
   }
 }
 

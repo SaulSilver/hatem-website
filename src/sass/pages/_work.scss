@@ -3,7 +3,7 @@
 
 .projects-content {
   .projects-container {
-    @include flex(row, space-around, center);
+    @include flex(row, center, center);
     flex-wrap: wrap;
     margin: 0;
     .project {
@@ -16,6 +16,7 @@
         display: none;
       }
       .project-image {
+        @include shadow(20px, 1px);
         transition: filter 0.25s ease-in-out;
         &:hover {
           filter: brightness(70%);
