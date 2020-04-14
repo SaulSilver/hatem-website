@@ -6,7 +6,7 @@ import PageNav from '../components/page-nav';
 import Img from 'gatsby-image';
 import moment from 'moment';
 // TODO: move to component
-const DATE_FORMAT = 'DD MMMM YYYY';
+const DATE_FORMAT = 'DD MMM YYYY';
 const formatDate = ({ from, to }) => {
   const fromMoment = moment(from);
   const toMoment = moment(to);
@@ -25,18 +25,17 @@ const Project = ({ data, pageContext }) => {
       <h1>{title}</h1>
       <small>{formatDate({ from, to })}</small>
       <br></br>
-      <a href={projectLink} target="_blank">
-        {projectLink}
-      </a>
-      <Img
-        className="project-image"
-        alt={`${title} image`}
-        fluid={projectImage.childImageSharp.fluid}
-      />
-      <div
-        className="blog-post-content"
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
+      <div className="project-container">
+        <a className="project-image" href={projectLink} target="_blank">
+          <Img
+            alt={`${title} image`}
+            fluid={projectImage.childImageSharp.fluid}
+          />
+        </a>
+        <div className="project-content">
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      </div>
       <PageNav previous={previous} next={next} />
     </Layout>
   );

@@ -1,7 +1,8 @@
 @import './variables';
 @import './mixins';
 @import './normalize';
-@import './pages/index';
+@import './pages';
+@import './templates';
 
 a {
   color: $color-primary;
@@ -22,7 +23,7 @@ footer {
 .layout {
   background: url(../images/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
   background-size: contain;
-  padding: 3% 15%;
+  padding: 3% 10%;
   height: 100vh;
 }
 

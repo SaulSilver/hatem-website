@@ -2,7 +2,7 @@
 path: '/work/shipandco_app'
 title: Ship&co Web App
 description: Decision making for database minor design
-from: '2020-05-01T22:12:03.284Z'
+from: '2017-01-01'
 to: ''
 projectLink: 'https://app.shipandco.com'
 projectImage: ../../images/shipandco_app.png

@@ -1,0 +1,24 @@
+@import '../mixins';
+@import '../variables';
+
+.project-container {
+  @include flex(row-reverse, space-between, center);
+  .project-image {
+    margin: 2em 0;
+    width: calc(80em + 30vw);
+    @include shadow(20px, 4px);
+  }
+  .project-content {
+    margin: 2em 4em 0 0;
+    padding: 0.5em;
+  }
+}
+
+@media screen and (max-width: $width-tab) {
+  .project-container {
+    flex-direction: column;
+    .project-image {
+      width: 80%;
+    }
+  }
+}
