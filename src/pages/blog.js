@@ -5,30 +5,27 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 
 const PostLink = (post, i) => {
-  const { title, path } = post.node.frontmatter;
+  const { frontmatter } = post.node;
   return (
-    <Link to={path} className="post" key={i}>
-      <li>{title}</li>
-    </Link>
+    <li className="post">
+      <div className="post-header inline">
+        <Link to={frontmatter.path} key={i}>
+          <h4>{frontmatter.title}</h4>
+        </Link>
+        <small>[{frontmatter.category}]</small>
+      </div>
+      <p>{frontmatter.description}</p>
+      <div>
+        <small>{frontmatter.date}</small>
+        <div className="post-tags inline">
+          {frontmatter.tags.map(tag => (
+            <small>#{tag}</small>
+          ))}
+        </div>
+      </div>
+    </li>
   );
 };
-
-export const postsQuery = graphql`
-  query PostsQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/posts/" } }) {
-      edges {
-        node {
-          id
-          frontmatter {
-            description
-            title
-            path
-          }
-        }
-      }
-    }
-  }
-`;
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
@@ -37,8 +34,8 @@ const Blog = ({ data }) => {
       <SEO title="Blog" />
       <div className="blog-content">
         <h1>
-          <Fade bottom cascade>
-            Blog
+          <Fade left cascade>
+            Latest Blog Posts
           </Fade>
         </h1>
         <ul className="posts-container">{posts.map(PostLink)}</ul>
@@ -48,3 +45,28 @@ const Blog = ({ data }) => {
 };
 
 export default Blog;
+
+export const postsQuery = graphql`
+  query PostsQuery {
+    allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "/posts/" }
+        frontmatter: { published: { eq: true } }
+      }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            description
+            title
+            path
+            category
+            tags
+            date(formatString: "DD MMM YYYY")
+          }
+        }
+      }
+    }
+  }
+`;

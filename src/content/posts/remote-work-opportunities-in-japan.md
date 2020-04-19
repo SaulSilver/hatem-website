@@ -2,9 +2,10 @@
 path: '/blog/remote-work-opportunities-in-japan'
 title: Remote work opportunities in Japan
 published: true
+date: '2020-05-01T22:12:03.284Z'
 description: Tech remote jobs scene in Japan is still growing but it does exist.
 category: software
-tags: job,japan,remote
+tags: ['job', 'japan', 'remote']
 ---
 
 TLDR; Remote jobs in Japan 💻 https://remotework.jp/

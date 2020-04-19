@@ -3,7 +3,7 @@
 
 form {
   @include flex(column, center, center);
-  margin: 3em 10em;
+  margin: 3% 30%;
   @media screen and (max-width: $width-mobile) {
     margin: 0;
   }

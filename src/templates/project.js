@@ -26,7 +26,12 @@ const Project = ({ data, pageContext }) => {
       <small>{formatDate({ from, to })}</small>
       <br></br>
       <div className="project-container">
-        <a className="project-image" href={projectLink} target="_blank">
+        <a
+          className="project-image"
+          href={projectLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Img
             alt={`${title} image`}
             fluid={projectImage.childImageSharp.fluid}
