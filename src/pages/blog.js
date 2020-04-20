@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby';
 import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
+import PostTags from '../components/post-tags';
 
 const PostLink = (post, i) => {
   const { frontmatter } = post.node;
@@ -12,16 +13,12 @@ const PostLink = (post, i) => {
         <Link to={frontmatter.path} key={i}>
           <h4>{frontmatter.title}</h4>
         </Link>
-        <small>[{frontmatter.category}]</small>
+        <small className="category">{frontmatter.category}</small>
       </div>
       <p>{frontmatter.description}</p>
       <div>
         <small>{frontmatter.date}</small>
-        <div className="post-tags inline">
-          {frontmatter.tags.map(tag => (
-            <small>#{tag}</small>
-          ))}
-        </div>
+        <PostTags tags={frontmatter.tags}></PostTags>
       </div>
     </li>
   );
