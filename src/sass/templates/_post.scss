@@ -1,0 +1,13 @@
+.layout {
+  background: none !important;
+  main {
+    margin: 0 2em;
+    .blog-post-content {
+      margin-top: 2em;
+      a {
+        color: $color-link;
+        text-decoration: underline;
+      }
+    }
+  }
+}

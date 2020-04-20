@@ -10,20 +10,28 @@
     margin-bottom: 0;
     padding: 1.5em;
     background-color: white;
-    border: 1px solid $color-tertiary;
-    .post-header {
-      margin-bottom: 0.5em;
-      h4 {
-        margin-bottom: 0.2em;
-      }
-    }
-    .post-tags {
-      margin-left: 1em;
-      small {
-        margin: 0.1em 0.3em;
-        text-align: center;
-        text-decoration: underline;
-      }
-    }
+    border: 0.1px solid $color-tertiary;
+  }
+}
+
+.post-header {
+  margin-bottom: 0.5em;
+  h1,
+  h4 {
+    margin-bottom: 0.2em;
+  }
+  .category {
+    padding: 0.2em 0.4em;
+    background-color: $color-tertiary;
+    color: $color-background;
+    border-radius: 5px;
+  }
+}
+.post-tags {
+  margin-left: 1em;
+  small {
+    margin: 0.1em 0.3em;
+    text-align: center;
+    text-decoration: underline;
   }
 }

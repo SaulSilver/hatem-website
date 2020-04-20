@@ -3,15 +3,21 @@ import { graphql } from 'gatsby';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import PageNav from '../components/page-nav';
+import PostTags from '../components/post-tags';
 
 const Post = ({ data, pageContext }) => {
   const { frontmatter, html } = data.markdownRemark;
-  const { nextPost, previousPost } = pageContext;
+  const { next: nextPost, previous: previousPost } = pageContext;
   return (
     <Layout>
       <SEO title="Blog post" />
-      <h1>{frontmatter.title}</h1>
+      <div className="post-header inline">
+        <h1>{frontmatter.title}</h1>
+        <small className="category">{frontmatter.category}</small>
+      </div>
+      <br></br>
       <small>{frontmatter.date}</small>
+      <PostTags tags={frontmatter.tags}></PostTags>
       <div
         className="blog-post-content"
         dangerouslySetInnerHTML={{ __html: html }}
@@ -26,104 +32,13 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
         title
+        path
+        category
+        tags
+        date(formatString: "DD MMM YYYY")
       }
     }
   }
 `;
 export default Post;
-
-// import React from 'react';
-// import Fade from 'react-reveal/Fade';
-// import Layout from '../components/layout';
-// import SEO from '../components/seo';
-// import PageNav from '../components/page-nav';
-
-// const Post = ({ currentPost, previousPost, nextPost, ...props }) => (
-//   <Layout>
-//     <SEO title="Blog post" />
-//     <h1>
-//       <Fade bottom cascade>
-//         {currentPost.title}
-//       </Fade>
-//     </h1>
-//     <div>{currentPost.description}</div>
-//     <PageNav previous={previousPost} next={nextPost} />
-//   </Layout>
-// );
-
-// export default Post;
-
-// import React from 'react';
-// import { Link, graphql } from 'gatsby';
-// import Bio from '../components/bio';
-// import Layout from '../components/layout';
-// import SEO from '../components/seo';
-
-// const BlogPostTemplate = ({ data, pageContext, location }) => {
-//   const post = data.markdownRemark;
-//   const siteTitle = data.site.siteMetadata.title;
-//   const { previous, next } = pageContext;
-
-//   return (
-//     <Layout location={location} title={siteTitle}>
-//       <SEO
-//         title={post.frontmatter.title}
-//         description={post.frontmatter.description || post.excerpt}
-//       />
-//       <article>
-//         <header>
-//           <h1>{post.frontmatter.title}</h1>
-//           <p>{post.frontmatter.date}</p>
-//         </header>
-//         <section dangerouslySetInnerHTML={{ __html: post.html }} />
-//         <hr />
-//         <footer>
-//           <Bio />
-//         </footer>
-//       </article>
-
-//       <nav>
-//         <ul>
-//           <li>
-//             {previous && (
-//               <Link to={previous.fields.slug} rel="prev">
-//                 ← {previous.frontmatter.title}
-//               </Link>
-//             )}
-//           </li>
-//           <li>
-//             {next && (
-//               <Link to={next.fields.slug} rel="next">
-//                 {next.frontmatter.title} →
-//               </Link>
-//             )}
-//           </li>
-//         </ul>
-//       </nav>
-//     </Layout>
-//   );
-// };
-
-// export default BlogPostTemplate;
-
-// export const pageQuery = graphql`
-//   query BlogPostBySlug($slug: String!) {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       id
-//       excerpt(pruneLength: 160)
-//       html
-//       frontmatter {
-//         title
-//         date(formatString: "MMMM DD, YYYY")
-//         description
-//       }
-//     }
-//   }
-// `;
