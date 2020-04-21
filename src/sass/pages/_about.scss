@@ -1,17 +1,32 @@
 @import '../mixins';
+@import '../variables';
 
+// TODO: start over
 .about {
+  .about-image-fullwidth {
+    display: none !important;
+  }
   .about-content {
-    @include flex(row, space-between, center);
-    flex-wrap: wrap;
-    p {
-      width: 500px;
-      @media screen and(max-width: 1160px) {
-        width: auto;
-      }
-    }
-    about-image {
-      min-width: 20%;
+    display: inline-grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 30px;
+    .about-image {
+      @include shadow(20px, 10px);
     }
   }
 }
+
+// @media screen and(max-width: $width-tab) {
+//   .about.about-image-fullwidth {
+//     padding: 0 !important;
+//     display: inline-flex !important;
+//     width: auto !important;
+//   }
+//   .about-content {
+//     grid-template-columns: 3fr 0fr;
+//     .about-image {
+//       display: none !important;
+//       width: 0%;
+//     }
+//   }
+// }

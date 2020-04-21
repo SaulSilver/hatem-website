@@ -9,15 +9,20 @@ const AboutPage = ({ data }) => {
   const pageContent = data.allMarkdownRemark.edges[0].node.frontmatter;
   console.log(pageContent);
   return (
-    <Layout>
+    <Layout className="about">
       <SEO title="About" />
-      <h1>Who is Hatem?</h1>
       <Img
+        className="about-image-fullwidth"
+        alt="Hatem Houssein"
+        fixed={pageContent.hatemImageFullWidth.childImageSharp.fixed}
+      />
+      <h1>Who is Hatem?</h1>
+      {/* <Img
         className="japan-image"
         alt="Japan"
         fluid={pageContent.japanImage.childImageSharp.fixed}
-      />
-      {/* <Img
+      /> 
+      <Img
         className="sweden-image"
         alt="Sweden"
         fluid={pageContent.swedenImage.childImageSharp.fluid}
@@ -29,13 +34,15 @@ const AboutPage = ({ data }) => {
       /> */}
       <div className="about-content">
         <Fade bottom>
-          <p>{pageContent.history}</p>
-          <p>{pageContent.interests}</p>
+          <div className="about-text">
+            <p>{pageContent.history}</p>
+            <p>{pageContent.interests}</p>
+          </div>
         </Fade>
         <Img
           className="about-image"
-          alt="Hatem Houssein at Teramachi in Kyoto, Japan."
-          fluid={pageContent.hatemImage.childImageSharp.fluid}
+          alt="Hatem Houssein"
+          fixed={pageContent.hatemImage.childImageSharp.fixed}
         />
       </div>
     </Layout>
@@ -55,8 +62,15 @@ export const query = graphql`
             interests
             hatemImage {
               childImageSharp {
-                fluid(maxWidth: 800) {
-                  ...GatsbyImageSharpFluid
+                fixed(width: 300) {
+                  ...GatsbyImageSharpFixed_tracedSVG
+                }
+              }
+            }
+            hatemImageFullWidth {
+              childImageSharp {
+                fixed {
+                  ...GatsbyImageSharpFixed_tracedSVG
                 }
               }
             }
