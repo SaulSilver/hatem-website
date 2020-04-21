@@ -9,7 +9,7 @@ const Post = ({ data, pageContext }) => {
   const { frontmatter, html } = data.markdownRemark;
   const { next: nextPost, previous: previousPost } = pageContext;
   return (
-    <Layout>
+    <Layout className="blog-post">
       <SEO title="Blog post" />
       <div className="post-header inline">
         <h1>{frontmatter.title}</h1>
