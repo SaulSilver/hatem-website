@@ -1,28 +1,26 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
+const PageNavLink = ({ link }) => (
+  <li>
+    <Link to={link.path}>{link.title}</Link>
+  </li>
+);
+
 const PageNav = ({ previous, next }) =>
   !previous && !next ? (
     ''
   ) : (
-    <nav>
-      <ul>
-        {!previous ? (
-          ''
-        ) : (
-          <li>
-            <Link to={previous.path}>{`< ${previous.title}`}</Link>
-          </li>
-        )}
-        {!next ? (
-          ''
-        ) : (
-          <li>
-            <Link to={next.path}>{`${next.title}>`}</Link>
-          </li>
-        )}
-      </ul>
-    </nav>
+    <div className="content-nav">
+      <hr />
+      <nav>
+        <h4>See also</h4>
+        <ul>
+          {!previous ? '' : <PageNavLink link={previous} />}
+          {!next ? '' : <PageNavLink link={next} />}
+        </ul>
+      </nav>
+    </div>
   );
 
 export default PageNav;

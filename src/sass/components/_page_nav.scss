@@ -1,0 +1,9 @@
+@import '../mixins';
+@import '../variables';
+
+.content-nav {
+  margin-top: 2em;
+  ul {
+    @include flex(column, flex-start, flex-start);
+  }
+}
