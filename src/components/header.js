@@ -25,7 +25,7 @@ const Header = () => {
             <Link to="/" activeClassName="active">
               <Img
                 alt="Hatem Houssein logo"
-                fluid={homeImg.nodes[0].fixed}
+                fixed={homeImg.nodes[0].fixed}
                 style={{ width: '42px', height: '42px' }}
               />
             </Link>
