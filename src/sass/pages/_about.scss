@@ -1,32 +1,13 @@
 @import '../mixins';
 @import '../variables';
 
-// TODO: start over
-.about {
-  .about-image-fullwidth {
-    display: none !important;
+.about-content {
+  margin: 0 10em;
+  @media screen and (max-width: $width-mobile) {
+    margin: 0;
   }
-  .about-content {
-    display: inline-grid;
-    grid-template-columns: 2fr 1fr;
-    column-gap: 30px;
-    .about-image {
-      @include shadow(20px, 10px);
-    }
+  .about-image {
+    margin: 3em 0;
+    @include shadow(20px, 5px);
   }
 }
-
-// @media screen and(max-width: $width-tab) {
-//   .about.about-image-fullwidth {
-//     padding: 0 !important;
-//     display: inline-flex !important;
-//     width: auto !important;
-//   }
-//   .about-content {
-//     grid-template-columns: 3fr 0fr;
-//     .about-image {
-//       display: none !important;
-//       width: 0%;
-//     }
-//   }
-// }

@@ -30,7 +30,7 @@ const Blog = ({ data }) => {
     <Layout>
       <SEO title="Blog" />
       <div className="blog-content">
-        <h1>
+        <h1 className="page-header-title">
           <Fade left cascade>
             Latest Blog Posts
           </Fade>

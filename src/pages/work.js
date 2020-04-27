@@ -27,7 +27,7 @@ const Work = ({ data }) => {
     <Layout>
       <SEO title="Work" />
       <div className="projects-content">
-        <h1>
+        <h1 className="page-header-title">
           <Fade bottom cascade>
             Projects
           </Fade>

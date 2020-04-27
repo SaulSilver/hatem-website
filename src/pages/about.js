@@ -11,12 +11,9 @@ const AboutPage = ({ data }) => {
   return (
     <Layout className="about">
       <SEO title="About" />
-      <Img
-        className="about-image-fullwidth"
-        alt="Hatem Houssein"
-        fixed={pageContent.hatemImageFullWidth.childImageSharp.fixed}
-      />
-      <h1>Who is Hatem?</h1>
+      <Fade left cascade>
+        <h1 className="page-header-title">Who is Hatem?</h1>
+      </Fade>
       {/* <Img
         className="japan-image"
         alt="Japan"
@@ -33,17 +30,13 @@ const AboutPage = ({ data }) => {
         fluid={pageContent.egyptImage.childImageSharp.fluid}
       /> */}
       <div className="about-content">
-        <Fade bottom>
-          <div className="about-text">
-            <p>{pageContent.history}</p>
-            <p>{pageContent.interests}</p>
-          </div>
-        </Fade>
+        <p>{pageContent.history}</p>
         <Img
           className="about-image"
           alt="Hatem Houssein"
-          fixed={pageContent.hatemImage.childImageSharp.fixed}
-        />
+          fluid={pageContent.hatemImage.childImageSharp.fluid}
+        ></Img>
+        <p>{pageContent.interests}</p>
       </div>
     </Layout>
   );
@@ -62,15 +55,8 @@ export const query = graphql`
             interests
             hatemImage {
               childImageSharp {
-                fixed(width: 300) {
-                  ...GatsbyImageSharpFixed_tracedSVG
-                }
-              }
-            }
-            hatemImageFullWidth {
-              childImageSharp {
-                fixed {
-                  ...GatsbyImageSharpFixed_tracedSVG
+                fluid(maxWidth: 700) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }

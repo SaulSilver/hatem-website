@@ -21,6 +21,10 @@ footer {
   @include flex(column, center, center);
 }
 
+h1.page-header-title {
+  text-align: center;
+}
+
 .layout {
   background: url(../images/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
   background-size: contain;

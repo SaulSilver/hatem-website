@@ -1,6 +1,13 @@
 @import '../variables';
 @import '../mixins';
 
+p.contact-me-intro {
+  text-align: center;
+  @media screen and (max-width: $width-mobile) {
+    text-align: left;
+  }
+}
+
 form {
   @include flex(column, center, center);
   margin: 3% 30%;

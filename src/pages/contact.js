@@ -1,8 +1,8 @@
 import React from 'react';
 import { navigate } from 'gatsby-link';
+import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { Link } from 'gatsby';
 
 const encode = data =>
   Object.keys(data)
@@ -36,8 +36,10 @@ const ContactPage = () => {
   return (
     <Layout>
       <SEO title="Contact" />
-      <h1>Say hello</h1>
-      <p>
+      <Fade left cascade>
+        <h1 className="page-header-title">Say hello</h1>
+      </Fade>
+      <p className="contact-me-intro">
         Feel free to contact me about anything and I will get back to you as
         soon as I can.
       </p>

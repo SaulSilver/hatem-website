@@ -1,8 +1,7 @@
 ---
 page: about
-history: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+history: Created remotework.jp website, web developer at Ship&co and mentor at YouCode. I manage projects and build apps/websites. Fullstack developer and freelancer specialized in Javascript technologies over the whole stack (Node.js, React, Vue, Meteor, MongoDB, REST & GraphQL APIs, JAMStack) to build web apps and websites.
 interests: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting
-hatemImageFullWidth: ../images/about.jpg
-hatemImage: ../images/about.png
+hatemImage: ../images/about.jpg
 japanImage: ../images/japan.png
 ---
