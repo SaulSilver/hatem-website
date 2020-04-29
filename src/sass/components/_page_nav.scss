@@ -2,8 +2,16 @@
 @import '../variables';
 
 .content-nav {
-  margin-top: 2em;
+  margin: 2em 0;
   ul {
+    margin-left: 0.5em;
     @include flex(column, flex-start, flex-start);
+    a {
+      color: $color-secondary;
+      transition: color ease-in-out 0.2s;
+      &:hover {
+        color: $color-primary;
+      }
+    }
   }
 }

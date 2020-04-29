@@ -16,9 +16,13 @@
 
 .post-header {
   margin-bottom: 0.5em;
+  a:hover {
+    color: $color-link;
+  }
   h1,
   h4 {
     margin-bottom: 0.2em;
+    transition: color ease-in-out 0.2s;
   }
   .category {
     padding: 0.2em 0.4em;
@@ -33,5 +37,15 @@
     margin: 0.1em 0.3em;
     text-align: center;
     text-decoration: underline;
+  }
+}
+
+// mobile version
+@media screen and (max-width: $width-mobile) {
+  .blog-content {
+    .posts-container {
+      margin: 0;
+      padding: 0;
+    }
   }
 }

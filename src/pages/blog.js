@@ -8,7 +8,7 @@ import PostTags from '../components/post-tags';
 const PostLink = (post, i) => {
   const { frontmatter } = post.node;
   return (
-    <li className="post">
+    <section className="post">
       <div className="post-header inline">
         <Link to={frontmatter.path} key={i}>
           <h4>{frontmatter.title}</h4>
@@ -20,14 +20,14 @@ const PostLink = (post, i) => {
         <small>{frontmatter.date}</small>
         <PostTags tags={frontmatter.tags}></PostTags>
       </div>
-    </li>
+    </section>
   );
 };
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges;
   return (
-    <Layout>
+    <Layout className="blogs-page">
       <SEO title="Blog" />
       <div className="blog-content">
         <h1 className="page-header-title">
@@ -35,7 +35,7 @@ const Blog = ({ data }) => {
             Latest Blog Posts
           </Fade>
         </h1>
-        <ul className="posts-container">{posts.map(PostLink)}</ul>
+        <div className="posts-container">{posts.map(PostLink)}</div>
       </div>
     </Layout>
   );

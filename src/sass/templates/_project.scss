@@ -3,9 +3,11 @@
 
 .project-container {
   @include flex(row-reverse, space-between, flex-start);
-  ul,
+  ul {
+    list-style: disc;
+  }
   ol {
-    list-style: cjk-ideographic;
+    list-style: decimal;
   }
   .project-image {
     margin: 2em 0;
@@ -23,7 +25,13 @@
   .project-container {
     flex-direction: column;
     .project-image {
-      width: 80%;
+      margin-bottom: 0;
+      width: 100%;
+    }
+    .project-content {
+      margin: 2em 0 0;
+      padding: 0;
+      min-width: 0;
     }
   }
 }
