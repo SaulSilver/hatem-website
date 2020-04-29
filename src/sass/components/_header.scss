@@ -1,10 +1,10 @@
 @import '../mixins';
 @import '../variables';
 
-.site-nav ul {
+.site-nav {
   margin: 1em;
   @include flex(row, space-around, center);
-  li a {
+  a {
     padding: 0 0.2em 0.5em;
     color: $color-tertiary;
     transition: color ease-in-out 0.3s;
@@ -12,8 +12,14 @@
       color: $color-primary;
     }
   }
-  .active {
+  .active:not(.home-link) {
     border-bottom: 2px solid $color-primary;
     color: $color-primary;
+  }
+  .home-link {
+    width: 42px;
+    height: 42px;
+    background: url('../images/logo.png');
+    background-size: cover;
   }
 }
