@@ -1,0 +1,19 @@
+@import '../mixins';
+@import '../variables';
+
+.site-nav ul {
+  margin: 1em;
+  @include flex(row, space-around, center);
+  li a {
+    padding: 0 0.2em 0.5em;
+    color: $color-tertiary;
+    transition: color ease-in-out 0.3s;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  .active {
+    border-bottom: 2px solid $color-primary;
+    color: $color-primary;
+  }
+}

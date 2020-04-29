@@ -9,14 +9,6 @@ a {
   color: $color-primary;
 }
 
-.site-nav ul {
-  margin: 1em;
-  @include flex(row, space-around, center);
-  .active {
-    text-decoration: underline;
-  }
-}
-
 footer {
   @include flex(column, center, center);
 }

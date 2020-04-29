@@ -3,7 +3,7 @@
 
 .about-content {
   margin: 0 10em;
-  @media screen and (max-width: $width-mobile) {
+  @media screen and (max-width: $width-tab) {
     margin: 0;
   }
   .about-image {
