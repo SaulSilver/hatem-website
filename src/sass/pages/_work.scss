@@ -6,6 +6,7 @@
     @include flex(row, center, center);
     flex-wrap: wrap;
     margin: 1em 0;
+    height: 100%;
     .project {
       position: relative;
       margin: 1em;
