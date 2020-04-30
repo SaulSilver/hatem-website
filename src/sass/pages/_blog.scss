@@ -6,11 +6,14 @@
   h1 {
     margin-bottom: 2em;
   }
-  .post {
-    margin-bottom: 0;
-    padding: 1.5em;
-    background-color: $color-background;
-    border: 0.1px solid $color-tertiary;
+  .posts-container {
+    padding-bottom: 3em;
+    .post {
+      margin-bottom: 0;
+      padding: 1.5em;
+      background-color: $color-background;
+      border: 0.1px solid $color-tertiary;
+    }
   }
 }
 
@@ -45,7 +48,7 @@
   .blog-content {
     .posts-container {
       margin: 0;
-      padding: 0;
+      padding: 0 0 3em;
     }
   }
 }
