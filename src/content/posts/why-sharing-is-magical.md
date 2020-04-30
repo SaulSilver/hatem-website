@@ -2,7 +2,7 @@
 path: '/blog/why-sharing-is-magical'
 title: Why sharing is magical
 published: true
-date: '2019-07-05'
+date: '2020-03-04'
 description: Sharing ideas, thoughts, information and knowledge is truly powerful. Here's a simple example to show what I mean by "Sharing is magical"
 category: software
 tags: ['opensource', 'font', 'design']

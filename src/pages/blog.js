@@ -50,6 +50,7 @@ export const postsQuery = graphql`
         fileAbsolutePath: { regex: "/posts/" }
         frontmatter: { published: { eq: true } }
       }
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {

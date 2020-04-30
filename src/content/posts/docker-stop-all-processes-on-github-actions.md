@@ -2,7 +2,7 @@
 path: '/blog/docker-stop-all-processes-on-github-actions'
 title: Docker stop all processes on Github Actions
 published: true
-date: '2019-07-05'
+date: '2020-02-04'
 description: How to show all Docker running containers, stop and remove them on Github Actions
 
 category: software

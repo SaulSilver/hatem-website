@@ -2,7 +2,7 @@
 path: '/blog/saving-dates-on-database-saves-your-day'
 title: Saving dates on database saves your day
 published: true
-date: '2020-05-01T22:12:03.284Z'
+date: '2019-05-15'
 description: Decision making for database minor design
 category: software
 tags: ['database', 'design']
