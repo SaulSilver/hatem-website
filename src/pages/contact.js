@@ -68,13 +68,15 @@ const ContactPage = () => {
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Email (required)"
           onChange={handleChange}
+          required
         />
         <textarea
           name="message"
-          placeholder="How can I help you? Want to grab a drink together?"
+          placeholder="How can I help you? Want to grab a drink together? (required)"
           onChange={handleChange}
+          required
         />
         <button type="submit" className="btn">
           Send message
