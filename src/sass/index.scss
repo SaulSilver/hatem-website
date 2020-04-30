@@ -25,9 +25,9 @@ h1.page-header-title {
   background-size: contain;
   padding: 3% 10%;
   @media screen and (max-width: $width-mobile) {
-    padding: 0 1em;
+    padding: 2em 1em;
     &.blogs-page {
-      padding: 0;
+      padding: 2em 0;
     }
   }
   height: 100vh;

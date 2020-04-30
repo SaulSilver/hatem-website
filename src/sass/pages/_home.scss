@@ -11,9 +11,6 @@
       margin: 6vh 0 5vh;
       font-weight: normal;
       font-size: calc(1em + 2vw);
-      @media screen and (max-width: $width-mobile) {
-        position: static;
-      }
     }
     .name {
       font-size: calc(1em + 6vw);
@@ -35,6 +32,19 @@
     }
     .btn {
       margin: 5vh 0 10vh;
+    }
+  }
+}
+
+// mobile version
+@media screen and (max-width: $width-mobile) {
+  .home main {
+    padding-top: 8em;
+    .profession {
+      position: static;
+    }
+    .do {
+      position: static;
     }
   }
 }
