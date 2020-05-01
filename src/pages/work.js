@@ -12,7 +12,7 @@ const ProjectLink = (post, i) => {
       <li>
         <Img
           className="project-image"
-          alt="Hatem Houssein at Teramachi in Kyoto, Japan."
+          alt={title + ' project by Hatem'}
           fluid={projectImage.childImageSharp.fluid}
         />
         <p>{title}</p>
@@ -24,7 +24,7 @@ const ProjectLink = (post, i) => {
 const Work = ({ data }) => {
   const projects = data.allMarkdownRemark.edges;
   return (
-    <Layout>
+    <Layout className="work-page">
       <SEO title="Work" />
       <div className="projects-content">
         <h1 className="page-header-title">

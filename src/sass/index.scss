@@ -24,6 +24,9 @@ h1.page-header-title {
   background: url(../images/background-logo.svg) center no-repeat; //import is relative the SCSS main entry file
   background-size: contain;
   padding: 3% 10%;
+  &.work-page {
+    padding: 3% 0;
+  }
   @media screen and (max-width: $width-mobile) {
     padding: 2em 1em;
     background-position: 50% 20%;
@@ -31,7 +34,7 @@ h1.page-header-title {
       padding: 2em 0;
     }
   }
-  height: 100vh;
+  height: 100%;
 }
 
 .btn {

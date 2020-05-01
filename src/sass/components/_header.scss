@@ -15,6 +15,7 @@
   .active:not(.home-link) {
     border-bottom: 2px solid $color-primary;
     color: $color-primary;
+    font-weight: bold;
   }
   .home-link {
     width: 42px;

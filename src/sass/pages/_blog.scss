@@ -2,6 +2,10 @@
 @import '../mixins';
 
 .blog-content {
+  margin: 0 10em;
+  @media screen and (max-width: $width-tab) {
+    margin: 0;
+  }
   @include flex(column, flex-start, center);
   h1 {
     margin-bottom: 2em;
@@ -46,6 +50,7 @@
 // mobile version
 @media screen and (max-width: $width-mobile) {
   .blog-content {
+    margin: 0;
     .posts-container {
       margin: 0;
       padding: 0 0 3em;
