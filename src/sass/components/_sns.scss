@@ -1,0 +1,25 @@
+@import '../mixins';
+
+.sns {
+  @include flex(row, space-around, center);
+  a div {
+    width: 15px;
+    height: 15px;
+    padding: 0 1em 1em;
+  }
+  .github div {
+    background: url(../images/sns/github.svg) center no-repeat; //import is relative the SCSS main entry file
+  }
+  .linkedin div {
+    background: url(../images/sns/linkedin.svg) center no-repeat; //import is relative the SCSS main entry file
+  }
+  .twitter div {
+    background: url(../images/sns/twitter.svg) center no-repeat; //import is relative the SCSS main entry file
+  }
+  .dev div {
+    background: url(../images/sns/dev.svg) center no-repeat; //import is relative the SCSS main entry file
+  }
+  .gitlab div {
+    background: url(../images/sns/gitlab.svg) center no-repeat; //import is relative the SCSS main entry file
+  }
+}

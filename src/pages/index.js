@@ -3,6 +3,7 @@ import Fade from 'react-reveal/Fade';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { Link } from 'gatsby';
+import Sns from '../components/sns';
 
 const HomePage = props => {
   return (
@@ -23,7 +24,7 @@ const HomePage = props => {
       <Link to="/contact" className="btn">
         Contact me
       </Link>
-      {/* </Fade> */}
+      <Sns />
     </Layout>
   );
 };
