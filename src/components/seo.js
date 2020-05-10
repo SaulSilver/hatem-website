@@ -11,7 +11,7 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, metaImage } = useStaticQuery(
     graphql`
       query {
         site {
@@ -23,12 +23,26 @@ function SEO({ description, lang, meta, title }) {
             }
           }
         }
+        metaImage: allImageSharp(
+          filter: { fluid: { src: { regex: "//logo.png/" } } }
+        ) {
+          edges {
+            node {
+              fixed {
+                src
+              }
+            }
+          }
+        }
       }
     `
   );
 
   const metaDescription = description || site.siteMetadata.description;
-
+  const image =
+    metaImage && metaImage.src
+      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+      : null;
   return (
     <Helmet
       htmlAttributes={{
@@ -69,7 +83,35 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription
         }
-      ].concat(meta)}
+      ]
+        .concat(
+          metaImage
+            ? [
+                {
+                  property: 'og:image',
+                  content: image
+                },
+                {
+                  property: 'og:image:width',
+                  content: metaImage.width
+                },
+                {
+                  property: 'og:image:height',
+                  content: metaImage.height
+                },
+                {
+                  name: 'twitter:card',
+                  content: 'summary_large_image'
+                }
+              ]
+            : [
+                {
+                  name: 'twitter:card',
+                  content: 'summary'
+                }
+              ]
+        )
+        .concat(meta)}
     />
   );
 }

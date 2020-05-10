@@ -11,3 +11,4 @@ Static website contains professional portfolio, blog and information about mysel
 - JAMstack using Gatsby
 - SCSS responsive design
 - Deployed using Netlify
+- AdobeXD for designing and wireframing
