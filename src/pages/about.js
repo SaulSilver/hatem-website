@@ -62,7 +62,7 @@ export const query = graphql`
             }
             japanImage {
               childImageSharp {
-                fixed(width: 400) {
+                fixed(width: 300) {
                   ...GatsbyImageSharpFixed
                 }
               }

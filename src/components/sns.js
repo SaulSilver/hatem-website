@@ -1,4 +1,5 @@
 import React from 'react';
+import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
 const LINKS = [
   { name: 'github', link: 'https://github.com/SaulSilver' },
@@ -11,15 +12,9 @@ const LINKS = [
 const Sns = () => (
   <section className="sns">
     {LINKS.map(({ name, link }, index) => (
-      <a
-        className={name}
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        key={index}
-      >
+      <OutboundLink className={name} href={link} target="_new" key={index}>
         <div></div>
-      </a>
+      </OutboundLink>
     ))}
   </section>
 );

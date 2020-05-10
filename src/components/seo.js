@@ -28,7 +28,7 @@ function SEO({ description, lang, meta, title }) {
         ) {
           edges {
             node {
-              fixed {
+              fixed(width: 100, height: 100) {
                 src
               }
             }

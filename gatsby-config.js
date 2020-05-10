@@ -50,6 +50,16 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/images/favicon.png` // This path is relative to the root of the site.
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-166049278-1',
+        head: true,
+        anonymize: true,
+        respectDNT: true,
+        pageTransitionDelay: 0
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
