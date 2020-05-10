@@ -2,15 +2,16 @@
 @import '../mixins';
 
 p.contact-me-intro {
-  text-align: center;
+  margin: 0 auto;
+  width: 50%;
   @media screen and (max-width: $width-mobile) {
-    text-align: left;
+    width: fit-content;
   }
 }
 
 form {
   @include flex(column, center, center);
-  margin: 3% 30%;
+  margin: 3% 25%;
   @media screen and (max-width: $width-mobile) {
     margin: 0;
   }

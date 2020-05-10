@@ -16,8 +16,6 @@ const ContactPage = () => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
 
-  // TODO: read about Netlify form submissions and notifications
-  // https://docs.netlify.com/forms/submissions/#form-submissions-ui
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.target;
@@ -40,8 +38,9 @@ const ContactPage = () => {
         <h1 className="page-header-title">Say hello</h1>
       </Fade>
       <p className="contact-me-intro">
-        Feel free to contact me about anything and I will get back to you as
-        soon as I can.
+        You got an idea/project you want to discuss? Or maybe you want me to
+        hold a seminar, workshop or have me as a speaker. Feel free to contact
+        me and I will get back to you as soon as I can.
       </p>
       <form
         name="contact"
