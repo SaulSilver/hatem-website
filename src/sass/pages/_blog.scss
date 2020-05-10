@@ -17,6 +17,9 @@
       padding: 1.5em;
       background-color: $color-background;
       border: 0.1px solid $color-tertiary;
+      &:not(:last-child) {
+        border-bottom: hidden;
+      }
     }
   }
 }
@@ -32,6 +35,7 @@
     transition: color ease-in-out 0.2s;
   }
   .category {
+    display: none; //TODO: show it when more blog posts are added
     padding: 0.2em 0.4em;
     background-color: $color-tertiary;
     color: $color-background;

@@ -1,14 +1,13 @@
 ---
 path: '/work/shipandco_app'
 title: Ship&co Web App
-description: Decision making for database minor design
-from: '2017-01-01'
+from: '2018-01-01'
 to: ''
 projectLink: 'https://app.shipandco.com'
 projectImage: ../../images/shipandco_app.png
 ---
 
-<abbr title="Software as a Service">SaaS</abbr> web application of an All-in-One Shipping Management Solution for Global eCommerce. Multilingual built using MeteorJS, MongoDB and has its own REST API offered to users.
+SaaS web application of an All-in-One Shipping Management Solution for Global eCommerce. Multilingual built using MeteorJS, MongoDB and has its own REST API offered to users.
 
 1. Working frontend and backend to deliver Ship&co
 1. Project managing tasks, dividing responsibilities and foresee the company’s goals.

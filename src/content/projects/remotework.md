@@ -1,12 +1,14 @@
 ---
 path: '/work/remote-jp'
 title: Remotework.jp
-description: Decision making for database minor design
-category: open-source
-date: '2020-05-01T22:12:03.284Z'
+from: '2020-02-01'
+to: ''
+projectLink: 'https://remotework.jp'
 projectImage: ../../images/remotework.png
-# tags: full,design
 ---
 
-Web application of an All-in-One Shipping Management Solution
-for Global E-commerce
+List of tech remote work opportunities to boost the remote-work scene in Japan.
+
+- Open-source
+- Multilingual project on GitHub
+- Built with Jekyll & SCSS supporting Dark Mode for your eyes.

@@ -15,7 +15,7 @@ const HomePage = props => {
         <h1 className="name">Hatem</h1>
       </Fade>
       <Fade delay={1200}>
-        <h3 className="do">Making web apps and websites for</h3>
+        <h3 className="do">Creating web apps and websites for</h3>
       </Fade>
       <Fade cascade delay={2000}>
         <h1 className="you">YOU</h1>
