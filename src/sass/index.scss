@@ -15,13 +15,17 @@
   --color-tertiary: hsl(0, 0%, 70%);
   --color-link: hsl(212, 100%, 49%);
   --color-project-card-hover: hsl(0, 0%, 99%);
-  // @media screen and (prefers-color-scheme: dark) {
-  //   --color-background: #000000;
-  // --color-primary: #d9d9d9;
-  //   --color-vermilion-hover: hsl(5, 76%, 75%);
-  // }
+  @media screen and (prefers-color-scheme: dark) {
+    --color-background: #000000;
+    --color-primary: #d9d9d9;
+    --color-vermilion-hover: hsl(5, 76%, 65%);
+  }
 }
 
+body {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
 a {
   color: var(--color-primary);
 }
@@ -57,6 +61,7 @@ h1.page-header-title {
 .btn {
   margin-top: 1em;
   padding: 0.7em 2.3em;
+  border: 0;
   background-color: var(--color-vermilion);
   color: white;
   text-align: center;

@@ -22,6 +22,8 @@ form {
   textarea {
     width: 100%;
     border: none;
+    background-color: var(--color-background);
+    color: var(--color-primary);
     border-bottom: solid 2px var(--color-tertiary);
     transition: border-color 0.25s ease-in-out;
     &:focus {

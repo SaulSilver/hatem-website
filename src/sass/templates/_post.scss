@@ -5,7 +5,7 @@
     .blog-post-content {
       margin-top: 2em;
       a {
-        color: $color-link;
+        color: var(--color-vermilion);
         text-decoration: underline;
       }
       ul {
