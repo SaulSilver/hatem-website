@@ -15,8 +15,8 @@
     .post {
       margin-bottom: 0;
       padding: 1.5em;
-      background-color: $color-background;
-      border: 0.1px solid $color-tertiary;
+      background-color: var(--color-background);
+      border: 0.1px solid var(--color-tertiary);
       &:not(:last-child) {
         border-bottom: hidden;
       }
@@ -37,8 +37,8 @@
   .category {
     display: none; //TODO: show it when more blog posts are added
     padding: 0.2em 0.4em;
-    background-color: $color-tertiary;
-    color: $color-background;
+    background-color: var(--color-tertiary);
+    color: var(--color-background);
     border-radius: 5px;
   }
 }

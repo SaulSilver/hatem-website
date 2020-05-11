@@ -5,8 +5,25 @@
 @import './templates';
 @import './components';
 
+// Dark and light modes coloring
+:root {
+  --color-background: hsl(0, 0%, 99%);
+  --color-vermilion: hsl(5, 76%, 55%);
+  --color-vermilion-hover: hsl(5, 76%, 40%);
+  --color-primary: hsl(0, 0%, 21%);
+  --color-secondary: hsl(0, 0%, 44%);
+  --color-tertiary: hsl(0, 0%, 70%);
+  --color-link: hsl(212, 100%, 49%);
+  --color-project-card-hover: hsl(0, 0%, 99%);
+  // @media screen and (prefers-color-scheme: dark) {
+  //   --color-background: #000000;
+  // --color-primary: #d9d9d9;
+  //   --color-vermilion-hover: hsl(5, 76%, 75%);
+  // }
+}
+
 a {
-  color: $color-primary;
+  color: var(--color-primary);
 }
 
 footer {
@@ -39,16 +56,17 @@ h1.page-header-title {
 
 .btn {
   margin-top: 1em;
-  padding: 10px 40px;
-  background-color: rgba($color-background, 0.7);
-  border: 1px solid rgba($color-secondary, 0.5);
+  padding: 0.7em 2.3em;
+  background-color: var(--color-vermilion);
+  color: white;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s, color 0.5s;
   transition-timing-function: ease-in-out;
   &:hover {
-    color: $color-background;
-    background-color: $color-secondary;
+    background-color: var(--color-vermilion-hover);
   }
 }
 

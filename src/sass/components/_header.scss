@@ -6,15 +6,15 @@
   @include flex(row, space-around, center);
   a {
     padding: 0 0.2em 0.5em;
-    color: $color-tertiary;
+    color: var(--color-tertiary);
     transition: color ease-in-out 0.3s;
     &:hover {
-      color: $color-primary;
+      color: var(--color-vermilion-hover);
     }
   }
   .active:not(.home-link) {
-    border-bottom: 2px solid $color-primary;
-    color: $color-primary;
+    border-bottom: 2px solid var(--color-vermilion);
+    color: var(--color-vermilion);
     font-weight: bold;
   }
   .home-link {

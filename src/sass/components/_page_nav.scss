@@ -7,10 +7,10 @@
     margin-left: 0.5em;
     @include flex(column, flex-start, flex-start);
     a {
-      color: $color-secondary;
+      color: var(--color-secondary);
       transition: color ease-in-out 0.2s;
       &:hover {
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
   }

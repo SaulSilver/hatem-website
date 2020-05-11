@@ -29,8 +29,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: $color-background;
-            text-shadow: 1px 1px 5px $color-primary;
+            color: var(--color-project-card-hover);
+            text-shadow: 1px 1px 5px hsl(0, 0%, 21%);
           }
         }
       }

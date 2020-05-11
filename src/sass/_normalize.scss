@@ -138,6 +138,7 @@ html [type='button'] {
 [type='submit']::-moz-focus-inner,
 button::-moz-focus-inner {
   border-style: none;
+  border: 0;
   padding: 0;
 }
 [type='button']:-moz-focusring,

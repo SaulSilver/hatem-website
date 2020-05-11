@@ -22,11 +22,11 @@ form {
   textarea {
     width: 100%;
     border: none;
-    border-bottom: solid 2px $color-tertiary;
+    border-bottom: solid 2px var(--color-tertiary);
     transition: border-color 0.25s ease-in-out;
     &:focus {
       outline: none;
-      border-color: $color-primary;
+      border-color: var(--color-vermilion);
     }
   }
   textarea {
