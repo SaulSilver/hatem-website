@@ -5,7 +5,7 @@
 @import './templates';
 @import './components';
 
-// Dark and light modes coloring
+// Light mode colors and dark mode coloring & styling
 :root {
   --color-background: hsl(0, 0%, 99%);
   --color-vermilion: hsl(5, 76%, 55%);
@@ -15,10 +15,23 @@
   --color-tertiary: hsl(0, 0%, 70%);
   --color-link: hsl(212, 100%, 49%);
   --color-project-card-hover: hsl(0, 0%, 99%);
+  --color-shadow: --color-tertiary;
   @media screen and (prefers-color-scheme: dark) {
-    --color-background: #000000;
-    --color-primary: #d9d9d9;
+    --color-background: hsl(0, 0%, 7%);
+    --color-vermilion: #c94436;
+    --color-primary: hsl(0, 0%, 75%);
+    --color-tertiary: hsl(0, 0%, 30%);
     --color-vermilion-hover: hsl(5, 76%, 65%);
+    --color-shadow: hsl(0, 0%, 15%);
+
+    .layout {
+      background: url(../images/background-logo-darkmode.svg) center no-repeat; //import is relative the SCSS main entry file
+    }
+
+    .site-nav .home-link {
+      background: url('../images/logo-darkmode.png');
+      background-size: contain;
+    }
   }
 }
 
@@ -63,7 +76,7 @@ h1.page-header-title {
   padding: 0.7em 2.3em;
   border: 0;
   background-color: var(--color-vermilion);
-  color: white;
+  color: hsl(0, 0%, 95%);
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;

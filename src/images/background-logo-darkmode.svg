@@ -1,6 +1,5 @@
-<svg
-  xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700">
-  <g id="Component_2_22" data-name="Component 2 – 22" transform="translate(0 700) rotate(-90)" opacity="0.156">
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700" viewBox="0 0 700 700">
+  <g id="Component_2_22" data-name="Component 2 – 22" transform="translate(0 700) rotate(-90)" opacity="0.09">
     <line id="Line_6" data-name="Line 6" y2="504" transform="translate(376.5 178.5)" fill="none" stroke="#e34234" stroke-width="20"/>
     <path id="Path_21" data-name="Path 21" d="M0,121" transform="translate(376.5 561.5)" fill="none" stroke="#000" stroke-width="20"/>
     <line id="Line_8" data-name="Line 8" x2="567" transform="translate(28.5 471.313)" fill="none" stroke="#e34234" stroke-width="20"/>
