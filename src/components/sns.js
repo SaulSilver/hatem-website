@@ -8,7 +8,7 @@ const LINKS = [
   { name: 'dev', link: 'https://dev.to/saulsilver' },
   { name: 'gitlab', link: 'https://gitlab.com/hForHatem' }
 ];
-
+// FIXME: show icons in darkmode
 const Sns = () => (
   <section className="sns">
     {LINKS.map(({ name, link }, index) => (

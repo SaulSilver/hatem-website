@@ -18,7 +18,7 @@
   --color-shadow: --color-tertiary;
   @media screen and (prefers-color-scheme: dark) {
     --color-background: hsl(0, 0%, 7%);
-    --color-vermilion: #c94436;
+    // --color-vermilion: #c94436;
     --color-primary: hsl(0, 0%, 75%);
     --color-tertiary: hsl(0, 0%, 30%);
     --color-vermilion-hover: hsl(5, 76%, 65%);
@@ -26,6 +26,7 @@
 
     .layout {
       background: url(../images/background-logo-darkmode.svg) center no-repeat; //import is relative the SCSS main entry file
+      background-size: contain;
     }
 
     .site-nav .home-link {
