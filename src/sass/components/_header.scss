@@ -6,7 +6,7 @@
   @include flex(row, space-around, center);
   a {
     padding: 0 0.2em 0.5em;
-    color: var(--color-tertiary);
+    color: var(--color-secondary);
     transition: color ease-in-out 0.3s;
     &:hover {
       color: var(--color-vermilion-hover);
