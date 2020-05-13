@@ -8,32 +8,40 @@ category: software
 tags: ['howto', 'teach', 'mentor', 'learn']
 ---
 
-Shopify is an E-commerce platform with cool APIs (much better than others). Their GraphQL has passed the Beta version and is now stable, and they are still maintaining REST.
+I am fortunate enough to have a workplace where we get interns quite often. Today is one of the interns' last day so felt like writing about teaching and how it helps both ways.
 
-Our app works with Shopify REST API and lately, we have been thinking about migrating to GraphQL. Why? GraphQL is newer, cooler and would _supposedly_ solve performance issues due to REST API restrictions.
+Having interns can be seen by some as time-consuming, less code quality, waste of resources, etc. I can assure it's not, based on my experience with it.
 
-I started digging into their docs, which is still work in progress but good enough.
+Surely, my statement depends on many factors; the intern's level, the mentor's level, the work environment, timing, etc. However, I have not seen this personally happening. A while ago, I stumbled upon one of MPJ's Monday videos (his channel is great if you're a web dev), the [video](https://www.youtube.com/watch?v=RleN-6uMF04&t=94s) topic is why teaching is good. Also, I read some articles which supported what he mentioned in his video.
 
-### Summary of GraphQL
+### Putting articles into practice
 
-Per its namesake, you can imagine a graph with _nodes_, _edges_ and _connections_. I will not get into this more but you can check this good [article](https://blog.apollographql.com/explaining-graphql-connections-c48b7c3d6976) to know more about GraphQL.
+Before I read about teaching, I was very cautious with what I advise to interns. Because I thought:
 
-1. GraphQL doesn't have call limit per-say but _cost_ rate exists. The cost normally depends on how many fields and connections cost, which is really well-explained in the article mentioned above. The cost rate is to avoid the server from crashing due to overload or attacks.
+- They don't have enough knowledge/experience to judge what I say (could be wrong) and most likely will take it for granted
+- I feel that I'm not 100% sure about something I know (e.g. framework or algorithm) so it's better to not mention it
 
-2. Pagination exists also for GraphQL called [_cursor pagination_](https://blog.apollographql.com/understanding-pagination-rest-graphql-and-relay-b10f835549e7), a little different from what I have experienced with REST's. ~~Although GraphQL's pagination can be implemented in REST APIs, I haven't seen one yet. Please let me know if you know any!~~ (Slack & Django do, thanks @rhymes!)
-   -------- Update 8/11/2019 --------
-   Shopify just released they're moving from page-based pagination to cursor-based pagination.
-   ***
+After reading, I realized my thoughts are partially incorrect.
 
-### Decision-making step
+- True that interns don't have enough knowledge/experience at work yet, it's only natural. However, this doesn't mean they wouldn't judge my advice. Even if they do something incorrect I advised, it teaches me and them on how to overcome this mistake the next time.
+- My knowledge is always incomplete about something, but this doesn't mean I should not mention it. Most of the time, this happens `I mention something wrong => someone corrects me => I research it a bit => I learn something new => mention it to that person`. We both have gained knowledge due to my first incorrect statements, this is amazing! Even if nobody knows that what I said is wrong, this makes me think twice before saying something I'm not sure of and go research more first.
 
-From my findings and based on some others' reviews, I was skeptical about migrating from REST to GraphQL. I read some reviews saying GraphQL is powerful for some processes but is still weak for other processes.
+### How to deliver a thought
 
-Mixing both APIs on our app would get the best of both APIs, but adds more complexity to the codebase. I would rather avoid complexity and be limited by either APIs.
+Explaining a thought out loud is not as easy as thinking it alone, especially if the language isn't your/their first language. Also, thoughts can make perfect sense in your head but are very messy. So when you speak them out, they come out in the same order as you think and eventually, the words don't make sense to anyone and probably to yourself.
 
-I felt Shopify's GraphQL was built upon their REST API design restricting GraphQL's advantages. My skepticism was growing and eventually, I stumbled upon this [article](https://medium.com/@francoisz/test-is-graphql-right-for-you-21a7a4858769). Based on a simple Q&A, you can see if it's worth migrating from REST to GraphQL. Of course, the decision, in the end, is up to you but it was quite affirmative to me that I was skeptical for a good reason.
+Teaching taught me that when I get a question, do a quick processing of the question and answer by doing the following
 
-### Conclusion
+1. Make sure to understand the question, maybe by asking questions back which sometimes solves the problem already
+2. Find the answer then complete the missing pieces of it
+3. Break the answer into bullet points and reorder them in a logical/chronological order (depending on the answer)
+4. Speak in an understandable manner and pace with well-timed short pauses, it gives the listener time to digest what you said. This depends on who you are talking to and how many
+5. Check if the listener(s) follow what you say. This is also tricky because "Is it clear?" question can be quite useless. A trick I came up with is preparing a "problem" with my solution (which I already know the answer of) and discuss it out loud, then see if the listener would respond to it. If no response, repeat from step 1 with a different approach.
 
-Eventually, we decided to hold on the migration for a while and see what Shopify GraphQL might introduce to us in the future.
-As a side-note, I believe in order to make a good GraphQL API, the API design should be thought of as a graph (with edges & nodes) to make it more efficient.
+Of course, steps 1-4 are great to me, I managed an answer which has added to my knowledge. But number 5 is the most important part, all that I have done in 1-4 is useless to the listener unless 5 is good to go.
+
+This process is just an outline and it fits me but it doesn't necessarily fit everyone. Find your own way and please share it in the comments if you already have one!
+
+### Reflection
+
+After over a year with interns, I have realized how organized my thinking has become and my answers make a lot more sense now than how it used to be a year ago. Communication with non-devs has even progressed because teaching can be _to_ anyone, _from_ anyone.
