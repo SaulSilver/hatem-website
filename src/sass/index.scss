@@ -15,7 +15,7 @@
   --color-tertiary: hsl(0, 0%, 70%);
   --color-link: hsl(212, 100%, 49%);
   --color-project-card-hover: hsl(0, 0%, 99%);
-  --color-shadow: --color-tertiary;
+  --color-shadow: var(--color-tertiary);
   @media screen and (prefers-color-scheme: dark) {
     --color-background: hsl(0, 0%, 7%);
     // --color-vermilion: #c94436;
