@@ -15,9 +15,9 @@ const PostLink = (post, i) => {
         </Link>
         <small className="category">{frontmatter.category}</small>
       </div>
-      <p>{frontmatter.description}</p>
-      <div>
-        <small>{frontmatter.date}</small>
+      <p className="description">{frontmatter.description}</p>
+      <div className="post-subinfo">
+        <small className="date">{frontmatter.date}</small>
         <PostTags tags={frontmatter.tags}></PostTags>
       </div>
     </section>

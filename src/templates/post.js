@@ -15,9 +15,10 @@ const Post = ({ data, pageContext }) => {
         <h1>{frontmatter.title}</h1>
         <small className="category">{frontmatter.category}</small>
       </div>
-      <br></br>
-      <small>{frontmatter.date}</small>
-      <PostTags tags={frontmatter.tags}></PostTags>
+      <div className="post-subinfo">
+        <small>{frontmatter.date}</small>
+        <PostTags tags={frontmatter.tags}></PostTags>
+      </div>
       <div
         className="blog-post-content"
         dangerouslySetInnerHTML={{ __html: html }}

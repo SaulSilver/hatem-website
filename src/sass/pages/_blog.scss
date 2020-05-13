@@ -20,6 +20,9 @@
       &:not(:last-child) {
         border-bottom: hidden;
       }
+      .description {
+        color: var(--color-secondary);
+      }
     }
   }
 }
@@ -42,12 +45,16 @@
     border-radius: 5px;
   }
 }
-.post-tags {
-  margin-left: 1em;
-  small {
-    margin: 0.1em 0.3em;
-    text-align: center;
-    text-decoration: underline;
+
+.post-subinfo {
+  color: var(--color-secondary);
+  .post-tags {
+    margin-left: 1em;
+    small {
+      margin: 0.1em 0.3em;
+      text-align: center;
+      text-decoration: underline;
+    }
   }
 }
 
