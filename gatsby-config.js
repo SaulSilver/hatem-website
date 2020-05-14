@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://hatem.page',
     title: `Hatem`,
-    description: `A web developer making web apps and websites for you.`,
+    description: `Website for Hatem, a web developer.`,
     author: {
       name: `Hatem Houssein`,
-      summary: `blabla`
+      summary: `A web developer creating web apps and websites. Also likes to blog his findings. `
     },
     email: `hatem.houssein@gmail.com`,
     gitHub: `SaulSilver`,
