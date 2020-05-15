@@ -3,6 +3,10 @@
 
 .project-container {
   @include flex(row-reverse, space-between, flex-start);
+  a {
+    color: var(--color-vermilion);
+    text-decoration: underline;
+  }
   ul {
     list-style: disc;
   }

@@ -7,8 +7,8 @@ projectLink: 'https://remotework.jp'
 projectImage: ../../images/remotework.png
 ---
 
-List of tech remote work opportunities to boost the remote-work scene in Japan.
+I believe remote work should be available to tech employees as much as possible. Therefore, I contributed by creating this website; a list of tech remote work opportunities to boost the remote-work scene in Japan.
 
-- Open-source
-- Multilingual project on GitHub
-- Built with Jekyll & SCSS supporting Dark Mode for your eyes.
+- Open-source available on <a href="https://github.com/remote-jp/remote-in-japan" target="_new">GitHub</a>
+- Multilingual website in Japanese and English
+- Built with Jekyll & SCSS supporting Dark and Light modes.
