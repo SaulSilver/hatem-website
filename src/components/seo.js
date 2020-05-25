@@ -10,8 +10,9 @@ function SEO({ description, lang, meta, title }) {
         siteUrl,
         defaultTitle,
         defaultDescription,
-        twitter,
         defaultImage,
+        twitter,
+        twitterImage,
         author
       }
     }
@@ -24,7 +25,8 @@ function SEO({ description, lang, meta, title }) {
             defaultTitle: title
             defaultDescription: description
             twitter
-            defaultImage: image
+            defaultImage: facebookImage
+            twitterImage
             author {
               name
             }
@@ -109,7 +111,7 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                   property: 'twitter:image',
-                  content: image
+                  content: twitterImage
                 },
                 {
                   name: 'twitter:card',
