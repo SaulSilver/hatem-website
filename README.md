@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/278c5c7f-d0c1-44a1-8880-60389e9434dc/deploy-status)](https://app.netlify.com/sites/hatem-personal/deploys)
+
+
 <p align="center">
   <a href="https://hatem.page">
     <img alt="Hatem logo" src="src/images/logo.png" width="60" />
