@@ -10,4 +10,8 @@
     margin: 3em 0;
     @include shadow(20px, 5px);
   }
+  .paragraph {
+    padding: 0.5em;
+    background-color: var(--color-background);
+  }
 }

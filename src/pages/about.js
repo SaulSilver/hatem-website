@@ -7,36 +7,20 @@ import SEO from '../components/seo';
 
 const AboutPage = ({ data }) => {
   const pageContent = data.allMarkdownRemark.edges[0].node.frontmatter;
-  console.log(pageContent);
   return (
     <Layout className="about">
       <SEO title="About" />
       <Fade left cascade>
         <h1 className="page-header-title">Who is Hatem?</h1>
       </Fade>
-      {/* <Img
-        className="japan-image"
-        alt="Japan"
-        fluid={pageContent.japanImage.childImageSharp.fixed}
-      /> 
-      <Img
-        className="sweden-image"
-        alt="Sweden"
-        fluid={pageContent.swedenImage.childImageSharp.fluid}
-      />
-      <Img
-        className="egypt-image"
-        alt="Egypt"
-        fluid={pageContent.egyptImage.childImageSharp.fluid}
-      /> */}
       <div className="about-content">
-        <p>{pageContent.history}</p>
+        <p className="paragraph">{pageContent.history}</p>
         <Img
           className="about-image"
           alt="Hatem Houssein"
           fluid={pageContent.hatemImage.childImageSharp.fluid}
         ></Img>
-        <p>{pageContent.interests}</p>
+        <p className="paragraph">{pageContent.interests}</p>
       </div>
     </Layout>
   );
@@ -57,13 +41,6 @@ export const query = graphql`
               childImageSharp {
                 fluid(maxWidth: 700) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
-                }
-              }
-            }
-            japanImage {
-              childImageSharp {
-                fixed(width: 300) {
-                  ...GatsbyImageSharpFixed
                 }
               }
             }
