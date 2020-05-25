@@ -1,48 +1,31 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title }) {
-  const { site, metaImage } = useStaticQuery(
+  const { site } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            siteUrl
             title
             description
+            metaImage: image
             author {
               name
-            }
-          }
-        }
-        metaImage: allImageSharp(
-          filter: { fluid: { src: { regex: "//logo.png/" } } }
-        ) {
-          edges {
-            node {
-              fixed(width: 100, height: 100) {
-                src
-              }
             }
           }
         }
       }
     `
   );
-
   const metaDescription = description || site.siteMetadata.description;
-  const image =
-    metaImage && metaImage.src
-      ? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      : null;
+  const metaImage = site.siteMetadata.metaImage;
+  const image = site.siteMetadata.metaImage
+    ? `${site.siteMetadata.siteUrl}${site.siteMetadata.metaImage}`
+    : null;
   return (
     <Helmet
       htmlAttributes={{
@@ -52,8 +35,16 @@ function SEO({ description, lang, meta, title }) {
       titleTemplate={`${site.siteMetadata.title}'s %s`}
       meta={[
         {
+          name: `author`,
+          content: site.siteMetadata?.author.name || 'Hatem Houssein'
+        },
+        {
           name: `description`,
           content: metaDescription
+        },
+        {
+          name: `date`,
+          content: new Date()
         },
         {
           property: `og:title`,

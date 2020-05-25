@@ -2,15 +2,16 @@ module.exports = {
   siteMetadata: {
     siteUrl: 'https://hatem.page',
     title: `Hatem`,
-    description: `Website for Hatem, a web developer.`,
+    description: `Website for Hatem, a web developer who creates web apps and websites for his clients. Also, he likes to write about tech.`,
     author: {
       name: `Hatem Houssein`,
-      summary: `A web developer creating web apps and websites. Also likes to blog his findings. `
+      summary: `A web developer creating web apps and websites. Also likes to blog his findings.`
     },
     email: `hatem.houssein@gmail.com`,
     gitHub: `SaulSilver`,
     gitLab: `hForHatem`,
-    twitter: `hatem_hou`
+    twitter: `hatem_hou`,
+    image: '/logo.png'
   },
   plugins: [
     `gatsby-plugin-sass`,
