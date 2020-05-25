@@ -4,15 +4,27 @@ import Helmet from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const {
+    site: {
+      siteMetadata: {
+        siteUrl,
+        defaultTitle,
+        defaultDescription,
+        twitter,
+        defaultImage,
+        author
+      }
+    }
+  } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
             siteUrl
-            title
-            description
-            metaImage: image
+            defaultTitle: title
+            defaultDescription: description
+            twitter
+            defaultImage: image
             author {
               name
             }
@@ -21,22 +33,19 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   );
-  const metaDescription = description || site.siteMetadata.description;
-  const metaImage = site.siteMetadata.metaImage;
-  const image = site.siteMetadata.metaImage
-    ? `${site.siteMetadata.siteUrl}${site.siteMetadata.metaImage}`
-    : null;
+  const metaDescription = description || defaultDescription;
+  const image = defaultImage ? `${siteUrl}${defaultImage}` : null;
   return (
     <Helmet
       htmlAttributes={{
         lang
       }}
       title={title}
-      titleTemplate={`${site.siteMetadata.title}'s %s`}
+      titleTemplate={`${defaultTitle}'s %s`}
       meta={[
         {
           name: `author`,
-          content: site.siteMetadata?.author.name || 'Hatem Houssein'
+          content: author.name || 'Hatem Houssein'
         },
         {
           name: `description`,
@@ -51,8 +60,16 @@ function SEO({ description, lang, meta, title }) {
           content: title
         },
         {
+          property: `og:url`,
+          content: siteUrl
+        },
+        {
           property: `og:description`,
           content: metaDescription
+        },
+        {
+          property: `og:site_name`,
+          content: defaultTitle
         },
         {
           property: `og:type`,
@@ -64,7 +81,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.twitter
+          content: twitter
         },
         {
           name: `twitter:title`,
@@ -76,7 +93,7 @@ function SEO({ description, lang, meta, title }) {
         }
       ]
         .concat(
-          metaImage
+          defaultImage
             ? [
                 {
                   property: 'og:image',
@@ -84,11 +101,15 @@ function SEO({ description, lang, meta, title }) {
                 },
                 {
                   property: 'og:image:width',
-                  content: metaImage.width
+                  content: defaultImage.width
                 },
                 {
                   property: 'og:image:height',
-                  content: metaImage.height
+                  content: defaultImage.height
+                },
+                {
+                  property: 'twitter:image',
+                  content: image
                 },
                 {
                   name: 'twitter:card',

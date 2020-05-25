@@ -11,7 +11,7 @@ module.exports = {
     gitHub: `SaulSilver`,
     gitLab: `hForHatem`,
     twitter: `hatem_hou`,
-    image: '/logo.png'
+    image: '/facebook_ogp.png'
   },
   plugins: [
     `gatsby-plugin-sass`,
