@@ -4,7 +4,12 @@ import React from 'react';
 const Header = () => (
   <header>
     <nav className="site-nav">
-      <Link to="/" className="home-link" activeClassName="active"></Link>
+      <Link
+        to="/"
+        className="home-link"
+        activeClassName="active"
+        name="home-page-link"
+      ></Link>
       <Link to="/about" activeClassName="active">
         About
       </Link>

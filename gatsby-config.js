@@ -10,9 +10,7 @@ module.exports = {
     email: `hatem.houssein@gmail.com`,
     gitHub: `SaulSilver`,
     gitLab: `hForHatem`,
-    twitter: `hatem_hou`,
-    facebookImage: '/facebook_ogp.png',
-    twitterImage: '/twitter_card_image.png'
+    facebookImage: '/facebook_ogp.png'
   },
   plugins: [
     `gatsby-plugin-sass`,

@@ -12,10 +12,10 @@ const HomePage = props => {
       {/* roll text: "Web developer", "Frontend", "Backend", "Freelancer", "Web designer", "Mentor" */}
       <h3 className="profession">Web developer</h3>
       <Fade cascade delay={500}>
-        <h1 className="name">Hatem</h1>
+        <h2 className="name">Hatem</h2>
       </Fade>
       <Fade delay={1200}>
-        <h3 className="do">Creating web apps and websites for</h3>
+        <h3 className="do">Creating web apps for</h3>
       </Fade>
       <Fade cascade delay={2000}>
         <h1 className="you">YOU</h1>

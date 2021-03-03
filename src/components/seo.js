@@ -11,8 +11,6 @@ function SEO({ description, lang, meta, title }) {
         defaultTitle,
         defaultDescription,
         defaultImage,
-        twitter,
-        twitterImage,
         author
       }
     }
@@ -24,9 +22,7 @@ function SEO({ description, lang, meta, title }) {
             siteUrl
             defaultTitle: title
             defaultDescription: description
-            twitter
             defaultImage: facebookImage
-            twitterImage
             author {
               name
             }
@@ -76,22 +72,6 @@ function SEO({ description, lang, meta, title }) {
         {
           property: `og:type`,
           content: `website`
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`
-        },
-        {
-          name: `twitter:creator`,
-          content: twitter
-        },
-        {
-          name: `twitter:title`,
-          content: title
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription
         }
       ]
         .concat(
@@ -108,22 +88,9 @@ function SEO({ description, lang, meta, title }) {
                 {
                   property: 'og:image:height',
                   content: defaultImage.height
-                },
-                {
-                  property: 'twitter:image',
-                  content: twitterImage
-                },
-                {
-                  name: 'twitter:card',
-                  content: 'summary_large_image'
                 }
               ]
-            : [
-                {
-                  name: 'twitter:card',
-                  content: 'summary'
-                }
-              ]
+            : []
         )
         .concat(meta)}
     />
