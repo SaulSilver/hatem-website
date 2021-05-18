@@ -12,15 +12,20 @@ export const heroData = {
   title: 'Hi, my name is',
   name: 'Hatem',
   subtitle: "I'm a Software Engineer",
+  location: 'Helsinki',
   cta: 'Know more',
 };
 
 // ABOUT DATA
 export const aboutData = {
   img: 'profile.jpg',
-  paragraphOne: '',
-  paragraphTwo: '',
-  paragraphThree: '',
+  paragraphOne:
+    'A Software Engineer managing projects and build apps/websites. Used to teach programming at YouCode school in Kyoto, Japan.',
+  paragraphTwo:
+    'I appreciate teamwork, productive process and outcome. Multicultural and international workplaces attract me. I enjoy meeting people, teaching and learning from others.',
+  paragraphThree:
+    'Aside from work and associated activities, I like spending time with family and friends, play guitar, football, workout or go for a walk.',
+  // TODO: add resume online to be hosten on subdomain
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
