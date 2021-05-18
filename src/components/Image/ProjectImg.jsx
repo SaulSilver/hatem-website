@@ -5,6 +5,23 @@ import Img from 'gatsby-image';
 
 const ProjectImg = ({ filename, alt }) => (
   <StaticQuery
+    // query={graphql`
+    //   query {
+    //     images: allFile {
+    //       edges {
+    //         node {
+    //           relativePath
+    //           name
+    //           childImageSharp {
+    //             fluid(maxWidth: 1366) {
+    //               ...GatsbyImageSharpFluid
+    //             }
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // `}
     query={graphql`
       query {
         images: allFile {
@@ -13,7 +30,7 @@ const ProjectImg = ({ filename, alt }) => (
               relativePath
               name
               childImageSharp {
-                fluid(maxWidth: 1366) {
+                fluid(maxWidth: 500) {
                   ...GatsbyImageSharpFluid
                 }
               }

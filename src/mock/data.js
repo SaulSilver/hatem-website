@@ -20,7 +20,7 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
-    'A Software Engineer managing projects and build apps/websites. Used to teach programming at YouCode school in Kyoto, Japan.',
+    'A Software Engineer managing projects and building apps/websites. Used to teach programming at YouCode school in Kyoto, Japan.',
   paragraphTwo:
     'I appreciate teamwork, productive process and outcome. Multicultural and international workplaces attract me. I enjoy meeting people, teaching and learning from others.',
   paragraphThree:
@@ -33,30 +33,31 @@ export const aboutData = {
 export const projectsData = [
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'shipandco_app.png',
+    title: 'Ship&co Web App',
+    info: 'SaaS web application of an All-in-One Shipping Management Solution for Global eCommerce. Multilingual built using MeteorJS, MongoDB and has its own REST API offered to users.',
+    info2:
+      'Deliver the SaaS web app for eCommerce shipping management solution. Handle 4 web applications and websites. Project management and foresee the company’s goals. Integrate EC platforms, carriers (e.g. Shopify, FedEx, etc.) and Stripe. Mentor multiple interns',
+    url: 'https://app.shipandco.com/',
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'shipandco_website.png',
+    title: 'Ship&co Website',
+    info: 'Static website for Ship&co app displaying its features, information and API documentation.',
+    info2:
+      'Mobile-friendly and lightning fast. Multilingual supporting Japanese, English and French. Built using JAMstack; MetalsmithJS, SCSS and Netlify',
+    url: 'https://www.shipandco.com/en/',
   },
   {
     id: nanoid(),
-    img: 'project.jpg',
-    title: '',
-    info: '',
-    info2: '',
-    url: '',
-    repo: 'https://github.com/cobidev/react-simplefolio', // if no repo, the button will not show up
+    img: 'remotework.png',
+    title: 'Remotework.jp',
+    info: 'I believe remote work should be available to tech employees even before COVID hit. So I contributed by creating this website; a list of tech remote work opportunities to boost the remote work scene in Japan.',
+    info2:
+      'Open-source project on GitHub. Website is in Japanese and English, built with Jekyll & SCSS supporting Dark and Light modes.',
+    url: 'https://remotework.jp/',
+    repo: 'https://github.com/remote-jp/remote-in-japan', // if no repo, the button will not show up
   },
 ];
 
@@ -64,7 +65,7 @@ export const projectsData = [
 export const contactData = {
   cta: '',
   btn: '',
-  email: '',
+  email: 'hatem.houssein@gmail.com',
 };
 
 // FOOTER DATA
@@ -72,28 +73,29 @@ export const footerData = {
   networks: [
     {
       id: nanoid(),
-      name: 'twitter',
-      url: '',
-    },
-    {
-      id: nanoid(),
-      name: 'codepen',
-      url: '',
-    },
-    {
-      id: nanoid(),
       name: 'linkedin',
-      url: '',
+      url: 'https://www.linkedin.com/in/hatemhoussein/',
     },
     {
       id: nanoid(),
       name: 'github',
-      url: '',
+      url: 'https://github.com/SaulSilver',
     },
+    {
+      id: nanoid(),
+      name: 'gitlab',
+      url: 'https://gitlab.com/hForHatem',
+    },
+    // TODO: add DEV link and missing icon
+    // {
+    //   id: nanoid(),
+    //   name: 'dev',
+    //   url: '',
+    // },
   ],
 };
 
 // Github start/fork buttons
 export const githubButtons = {
-  isEnabled: true, // set to false to disable the GitHub stars/fork buttons
+  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
