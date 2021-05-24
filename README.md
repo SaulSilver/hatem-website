@@ -9,7 +9,7 @@
   Hatem's website
 </h1>
 
-Hatem's JAMstack website built with Gatsby, SCSS and deployed using Netlify. Supports light & dark modes. The website includes
+Hatem's JAMstack website built with Gatsby, SCSS and deployed using Netlify. The website includes
 
 1. Portfolio
 1. Blog

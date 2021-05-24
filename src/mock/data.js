@@ -22,15 +22,23 @@ export const aboutData = {
   paragraphOne:
     'A Software Engineer managing projects and building apps/websites. Used to teach programming at YouCode school in Kyoto, Japan.',
   paragraphTwo:
-    'I appreciate teamwork, productive process and outcome. Multicultural and international workplaces attract me. I enjoy meeting people, teaching and learning from others.',
+    'I appreciate teamwork, wellbeing, productive process and outcome. Multicultural and international workplaces attract me. I enjoy meeting people, teaching and learning from others.',
   paragraphThree:
-    'Aside from work and associated activities, I like spending time with family and friends, play guitar, football, workout or go for a walk.',
+    'Aside from work and associated activities, I like spending time with family and friends, play guitar, football, workout or go for a walk. Lately, I have been learning about Psychology and mental wellbeing.',
   // TODO: add resume online to be hosten on subdomain
   resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
 export const projectsData = [
+  {
+    id: nanoid(),
+    img: 'lancul.png',
+    title: 'LanCul CRM Web App',
+    info: 'Being in charge of the LanCul’s web development, I built an internal CRM to handle clients’ data and help the employees to avoid mundane tasks.',
+    info2: '',
+    url: '',
+  },
   {
     id: nanoid(),
     img: 'shipandco_app.png',
@@ -93,9 +101,4 @@ export const footerData = {
     //   url: '',
     // },
   ],
-};
-
-// Github start/fork buttons
-export const githubButtons = {
-  isEnabled: false, // set to false to disable the GitHub stars/fork buttons
 };
