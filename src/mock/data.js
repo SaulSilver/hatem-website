@@ -25,8 +25,7 @@ export const aboutData = {
     'I appreciate teamwork, wellbeing, productive process and outcome. Multicultural and international workplaces attract me. I enjoy meeting people, teaching and learning from others.',
   paragraphThree:
     'Aside from work and associated activities, I like spending time with family and friends, play guitar, football, workout or go for a walk. Lately, I have been learning about Psychology and mental wellbeing.',
-  // TODO: add resume online to be hosten on subdomain
-  resume: 'https://www.resumemaker.online/es.php', // if no resume, the button will not show up
+  resume: 'resume.pdf', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA

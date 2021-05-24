@@ -11,8 +11,8 @@
 
 Hatem's JAMstack website built with Gatsby, SCSS and deployed using Netlify. The website includes
 
+1. About
 1. Portfolio
-1. Blog
 1. Contact info
 
 ## 🚀 Quick start
