@@ -36,7 +36,7 @@ export const projectsData = [
     img: 'lancul.png',
     title: 'LanCul CRM Web App',
     info: 'Being in charge of the LanCul’s web development, I built an internal CRM to handle clients’ data and help the employees to avoid mundane tasks.',
-    info2: '',
+    info2: 'Stack used: React, Python, AWS, MySQL',
     url: '',
   },
   {
