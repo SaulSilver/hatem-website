@@ -34,7 +34,7 @@ export const projectsData = [
     id: nanoid(),
     img: 'lancul.png',
     title: 'LanCul CRM Web App',
-    info: 'Being in charge of the LanCul’s web development, I built an internal CRM to handle clients’ data and help the employees to avoid mundane tasks.',
+    info: 'Being in charge of LanCul’s web development, I built an internal CRM to handle clients’ data and help the employees to avoid mundane tasks.',
     info2: 'Stack used: React, Python, AWS, MySQL',
     url: '',
   },
@@ -44,7 +44,7 @@ export const projectsData = [
     title: 'Ship&co Web App',
     info: 'SaaS web application of an All-in-One Shipping Management Solution for Global eCommerce. Multilingual built using MeteorJS, MongoDB and has its own REST API offered to users.',
     info2:
-      'Deliver the SaaS web app for eCommerce shipping management solution. Handle 4 web applications and websites. Project management and foresee the company’s goals. Integrate EC platforms, carriers (e.g. Shopify, FedEx, etc.) and Stripe. Mentor multiple interns',
+      'Deliver the SaaS web app for eCommerce shipping management solution. Handle 4 web applications and websites. Project management and foresee the company’s goals. Integrate EC platforms, carriers (e.g. Shopify, FedEx, etc.) and Stripe. Mentor multiple interns.',
     url: 'https://app.shipandco.com/',
   },
   {
@@ -53,7 +53,7 @@ export const projectsData = [
     title: 'Ship&co Website',
     info: 'Static website for Ship&co app displaying its features, information and API documentation.',
     info2:
-      'Mobile-friendly and lightning fast. Multilingual supporting Japanese, English and French. Built using JAMstack; MetalsmithJS, SCSS and Netlify',
+      'Mobile-friendly and lightning fast. Multilingual supporting Japanese, English and French. Built using JAMstack; MetalsmithJS, SCSS and Netlify.',
     url: 'https://www.shipandco.com/en/',
   },
   {
