@@ -1,16 +1,16 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://hatem.page',
-    title: `Hatem`,
-    description: `Website for Hatem, a software engineer.`,
+    title: 'Hatem',
+    description: 'Website for Hatem, a software engineer.',
     author: {
-      name: `Hatem Houssein`,
-      summary: `Website for Hatem, a software engineer.`,
+      name: 'Hatem Houssein',
+      summary: 'Website for Hatem, a software engineer.'
     },
-    email: `hatem.houssein@gmail.com`,
-    gitHub: `SaulSilver`,
-    gitLab: `hForHatem`,
-    facebookImage: '/facebook_ogp.png',
+    email: 'hatem.houssein@gmail.com',
+    gitHub: 'SaulSilver',
+    gitLab: 'hForHatem',
+    facebookImage: '/facebook_ogp.png'
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -22,15 +22,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`,
-      },
+        path: `${__dirname}/src/images/`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages/`,
-      },
+        path: `${__dirname}/src/pages/`
+      }
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -41,8 +41,8 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#02aab0`,
         display: `standalone`,
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
-      },
+        icon: 'src/images/favicon.png' // This path is relative to the root of the site.
+      }
     },
     {
       resolve: `gatsby-plugin-google-analytics`,
@@ -51,8 +51,8 @@ module.exports = {
         head: true,
         anonymize: true,
         respectDNT: true,
-        pageTransitionDelay: 0,
-      },
-    },
-  ],
+        pageTransitionDelay: 0
+      }
+    }
+  ]
 };
