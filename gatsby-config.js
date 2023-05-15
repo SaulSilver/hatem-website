@@ -9,7 +9,7 @@ module.exports = {
     },
     email: 'hatem.houssein@gmail.com',
     gitHub: 'SaulSilver',
-    gitLab: 'hForHatem',
+    // gitLab: 'hForHatem',
     facebookImage: '/facebook_ogp.png'
   },
   plugins: [

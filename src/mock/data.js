@@ -87,13 +87,12 @@ export const footerData = {
       id: nanoid(),
       name: 'github',
       url: 'https://github.com/SaulSilver'
-    },
-    {
-      id: nanoid(),
-      name: 'gitlab',
-      url: 'https://gitlab.com/hForHatem'
     }
-    // TODO: add DEV link and missing icon
+    // {
+    //   id: nanoid(),
+    //   name: 'gitlab',
+    //   url: 'https://gitlab.com/hForHatem'
+    // }
     // {
     //   id: nanoid(),
     //   name: 'dev',
