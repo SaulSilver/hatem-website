@@ -23,7 +23,9 @@ const AboutImg = ({ filename, alt }) => (
       }
     `}
     render={(data) => {
-      const image = data.images.edges.find((n) => n.node.relativePath.includes(filename));
+      const image = data.images.edges.find((n) =>
+        n.node.relativePath.includes(filename)
+      );
 
       if (!image) return null;
 
@@ -35,7 +37,7 @@ const AboutImg = ({ filename, alt }) => (
 
 AboutImg.propTypes = {
   filename: PropTypes.string,
-  alt: PropTypes.string,
+  alt: PropTypes.string
 };
 
 export default AboutImg;

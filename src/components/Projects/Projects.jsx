@@ -42,7 +42,9 @@ const Projects = () => {
                   >
                     <div className="project-wrapper__text">
                       {/* TODO: add project year  */}
-                      <h3 className="project-wrapper__text-title">{title || 'Project Title'}</h3>
+                      <h3 className="project-wrapper__text-title">
+                        {title || 'Project Title'}
+                      </h3>
                       <div>
                         <p>{info}</p>
                         <p className="mb-4">{info2 || ''}</p>
@@ -96,7 +98,7 @@ const Projects = () => {
                             transition: true,
                             axis: null,
                             reset: true,
-                            easing: 'cubic-bezier(.03,.98,.52,.99)',
+                            easing: 'cubic-bezier(.03,.98,.52,.99)'
                           }}
                         >
                           <div data-tilt className="thumbnail rounded">

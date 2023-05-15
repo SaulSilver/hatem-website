@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 export const headData = {
   title: 'Hatem - Software Engineer', // e.g: 'Name | Developer'
   lang: 'en', // e.g: en, es, fr, jp
-  description: 'Website for Hatem, a software engineer.', // e.g: Welcome to my website
+  description: 'Website for Hatem, a software engineer.' // e.g: Welcome to my website
 };
 
 // HERO DATA
@@ -13,7 +13,7 @@ export const heroData = {
   name: 'Hatem',
   subtitle: "I'm a Software Engineer",
   location: 'Helsinki',
-  cta: 'Know more',
+  cta: 'Know more'
 };
 
 // ABOUT DATA
@@ -25,7 +25,7 @@ export const aboutData = {
     'I appreciate teamwork, wellbeing, productive process and outcome. Multicultural and international workplaces attract me. I enjoy meeting people, teaching and learning from others.',
   paragraphThree:
     'Aside from work and associated activities, I like spending time with family and friends, play guitar, football, workout or go for a walk. Lately, I have been learning about Psychology and mental wellbeing.',
-  resume: 'resume.pdf', // if no resume, the button will not show up
+  resume: 'resume.pdf' // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
@@ -36,7 +36,7 @@ export const projectsData = [
     title: 'LanCul CRM Web App',
     info: 'Being in charge of LanCul’s web development, I built an internal CRM to handle clients’ data and help the employees to avoid mundane tasks.',
     info2: 'Stack used: React, Python, AWS, MySQL',
-    url: '',
+    url: ''
   },
   {
     id: nanoid(),
@@ -45,7 +45,7 @@ export const projectsData = [
     info: 'SaaS web application of an All-in-One Shipping Management Solution for Global eCommerce. Multilingual built using MeteorJS, MongoDB and has its own REST API offered to users.',
     info2:
       'Deliver the SaaS web app for eCommerce shipping management solution. Handle 4 web applications and websites. Project management and foresee the company’s goals. Integrate EC platforms, carriers (e.g. Shopify, FedEx, etc.) and Stripe. Mentor multiple interns.',
-    url: 'https://app.shipandco.com/',
+    url: 'https://app.shipandco.com/'
   },
   {
     id: nanoid(),
@@ -54,7 +54,7 @@ export const projectsData = [
     info: 'Static website for Ship&co app displaying its features, information and API documentation.',
     info2:
       'Mobile-friendly and lightning fast. Multilingual supporting Japanese, English and French. Built using JAMstack; MetalsmithJS, SCSS and Netlify.',
-    url: 'https://www.shipandco.com/en/',
+    url: 'https://www.shipandco.com/en/'
   },
   {
     id: nanoid(),
@@ -64,15 +64,15 @@ export const projectsData = [
     info2:
       'Open-source project on GitHub. Website is in Japanese and English, built with Jekyll & SCSS supporting Dark and Light modes.',
     url: 'https://remotework.jp/',
-    repo: 'https://github.com/remote-jp/remote-in-japan', // if no repo, the button will not show up
-  },
+    repo: 'https://github.com/remote-jp/remote-in-japan' // if no repo, the button will not show up
+  }
 ];
 
 // CONTACT DATA
 export const contactData = {
   cta: '',
   btn: '',
-  email: 'hatem.houssein@gmail.com',
+  email: 'hatem.houssein@gmail.com'
 };
 
 // FOOTER DATA
@@ -81,23 +81,23 @@ export const footerData = {
     {
       id: nanoid(),
       name: 'linkedin',
-      url: 'https://www.linkedin.com/in/hatemhoussein/',
+      url: 'https://www.linkedin.com/in/hatemhoussein/'
     },
     {
       id: nanoid(),
       name: 'github',
-      url: 'https://github.com/SaulSilver',
+      url: 'https://github.com/SaulSilver'
     },
     {
       id: nanoid(),
       name: 'gitlab',
-      url: 'https://gitlab.com/hForHatem',
-    },
+      url: 'https://gitlab.com/hForHatem'
+    }
     // TODO: add DEV link and missing icon
     // {
     //   id: nanoid(),
     //   name: 'dev',
     //   url: '',
     // },
-  ],
+  ]
 };
