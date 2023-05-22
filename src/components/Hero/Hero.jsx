@@ -33,12 +33,12 @@ const Header = () => {
         >
           <h1 className="hero-title">
             {title || 'Hi, my name is'}
-            <span className="text-color-main">{name || 'Hatem'}</span>
+            <span className="text-color-main"> {name || 'Hatem'}</span>
             <br />
             {subtitle || "I'm a Software Engineer."}
             <br />
             Living in
-            <span className="text-color-blue">{location || 'Helsinki'}</span>
+            <span className="text-color-blue"> {location || 'Helsinki'}</span>
           </h1>
         </Fade>
         <Fade
