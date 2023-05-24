@@ -20,9 +20,9 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.jpg',
   paragraphOne:
-    'A Software Engineer managing projects and building apps/websites. Used to teach programming at YouCode school in Kyoto, Japan.',
+    'A Software Engineer with main focus on web development and a mentor.',
   paragraphTwo:
-    'I appreciate teamwork, wellbeing, productive process and outcome. Multicultural and international workplaces attract me. I enjoy meeting people, teaching and learning from others.',
+    'I appreciate teamwork and multicultural workplaces. I build well-structured supportive stress-free environment for my teams. I appreciate teamwork, productive process and outcome. Multicultural workplaces attract me.',
   paragraphThree:
     'Aside from work and associated activities, I like spending time with family and friends, play guitar, football, workout or go for a walk. Lately, I have been learning about Psychology and mental wellbeing.'
   // resume: 'resume.pdf' // if no resume, the button will not show up
@@ -44,7 +44,8 @@ export const projectsData = [
     img: 'fiba3x3_worldtour.png',
     title: 'FIBA 3x3 World Tour Website',
     info: 'Focuses specifically on the FIBA 3x3 World Tour pro-level competitions, providing a centralized source for teams, players, and fans to access exclusive information, news, and updates. From tournament details and standings to captivating highlights, the platform immerses users in the thrilling world of global 3x3 basketball competition.',
-    info2: 'Server-rendered website using React, Redux, Typescript, SCSS, AWS.',
+    info2:
+      'Server-side rendered website using React, Redux, Typescript, SCSS, AWS.',
     url: 'https://worldtour.fiba3x3.com/'
   },
   {
